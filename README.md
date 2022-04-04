@@ -33,6 +33,7 @@ yarn lint:fix # If you need to --fix
 
 ```bash
 yarn test
+yarn test:watch # If you need to --watch
 ```
 
 ## Contributors
