@@ -1,15 +1,10 @@
-/**
- * Learn more about deep linking with React Navigation
- * https://reactnavigation.org/docs/deep-linking
- * https://reactnavigation.org/docs/configuring-links
- */
-
 import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 
 import { RootStackParamList } from '../types';
 
-const linking: LinkingOptions<RootStackParamList> = {
+const routes: LinkingOptions<RootStackParamList> = {
+  // TODO: Replace deprecated makeUrl function
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
@@ -33,4 +28,4 @@ const linking: LinkingOptions<RootStackParamList> = {
   },
 };
 
-export default linking;
+export default routes;

@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll"
+    "ios": "expo start --ios",
+    "lint": "eslint --ext ts .",
+    "lint:fix": "eslint --fix --ext ts .",
+    "start": "expo start",
+    "test": "jest --watchAll",
+    "web": "expo start --web"
   },
   "jest": {
     "preset": "jest-expo"
@@ -31,14 +33,23 @@
     "react-native": "0.64.3",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@react-native-community/eslint-config": "^3.0.1",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
-    "jest-expo": "~44.0.1",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-typescript": "^16.1.2",
+    "eslint-plugin-import": "^2.25.4",
     "jest": "^26.6.3",
+    "jest-expo": "~44.0.1",
+    "prettier": "^2.6.2",
     "react-test-renderer": "17.0.1",
     "typescript": "~4.3.5"
   },

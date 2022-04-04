@@ -1,9 +1,9 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import { RootStackScreenProps } from '../../../types';
+import { View } from '../../../components/layout';
+import { Text } from '../../../components/typography';
 
-import { Text, View } from '../components/Themed';
-import { RootStackScreenProps } from '../types';
-
-export default function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
+function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>This screen doesn't exist.</Text>
@@ -34,3 +34,5 @@ const styles = StyleSheet.create({
     color: '#2e78b7',
   },
 });
+
+export default NotFoundScreen;
