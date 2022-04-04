@@ -43,7 +43,3 @@ jobs:
         run: yarn lint
       - name: Run tests
         run: yarn test
-      - name: Build Android
-        run: yarn build:android
-      - name: Build iOS
-        run: yarn build:ios
