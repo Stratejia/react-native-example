@@ -47,8 +47,8 @@ yarn eject
 ### Build app
 
 ```bash
-yarn build:android # For Android
-yarn build:ios # For iOS
+yarn build:android
+yarn build:ios
 ```
 
 ### Run app

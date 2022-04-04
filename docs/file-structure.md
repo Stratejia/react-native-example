@@ -30,7 +30,6 @@ Here's an explanation for the current file structure in this app:
   - `app.json`: Expo app config
   - `App.tsx`: App startup, root node
   - `babel.config.json`: Babel config
-  - `eas.json`: EAS build config
   - `index.js`: Native entry point
   - `metro.config.json`: Metro config
   - `package.json`: NPM package definition
