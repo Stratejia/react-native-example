@@ -8,3 +8,4 @@
 6. Always use a linter, in a way, it can act as unit testing in the context of a frontend app.
 7. Domain logic shouldn't be placed in the frontend, nor should it be tested here.
 8. A good CI is not a nice-to-have, it is a necessity.
+9. Frenglish documentation, english codebase.
