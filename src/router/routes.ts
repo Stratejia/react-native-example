@@ -10,14 +10,14 @@ const routes: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          NfcReader: {
             screens: {
-              TabOneScreen: 'one',
+              NfcReader: 'nfcReader',
             },
           },
-          TabTwo: {
+          NfcWriter: {
             screens: {
-              TabTwoScreen: 'two',
+              NfcWriter: 'nfcWriter',
             },
           },
         },

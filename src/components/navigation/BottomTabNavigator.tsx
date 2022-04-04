@@ -1,12 +1,10 @@
-import { FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Pressable } from 'react-native';
 import useColorScheme from '../../hooks/useColorScheme';
-import { RootTabParamList, RootTabScreenProps } from '../../types';
+import { RootTabParamList } from '../../types';
 import { TabBarIcon } from '../icons';
 import colors from '../../styles/colors';
-import TabOneScreen from '../../domain/boilerplate/screens/TabOneScreen';
-import TabTwoScreen from '../../domain/boilerplate/screens/TabTwoScreen';
+import NfcReaderScreen from '../../domain/nfc/screens/NfcReaderScreen';
+import NfcWriterScreen from '../../domain/nfc/screens/NfcWriterScreen';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
@@ -15,37 +13,23 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="NfcReader"
       screenOptions={{
         tabBarActiveTintColor: colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
+        name="NfcReader"
+        component={NfcReaderScreen}
+        options={{
+          title: 'NFC Reader',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Modal')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
-        })}
+        }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="NfcWriter"
+        component={NfcWriterScreen}
         options={{
-          title: 'Tab Two',
+          title: 'NFC Writer',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

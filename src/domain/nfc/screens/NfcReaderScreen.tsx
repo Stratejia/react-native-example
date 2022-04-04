@@ -1,14 +1,15 @@
 import { StyleSheet } from 'react-native';
-import EditScreenInfo from '../components/EditScreenInfo';
+import { RootTabScreenProps } from '../../../types';
 import { View } from '../../../components/layout';
 import { Text } from '../../../components/typography';
+import NfcReader from '../components/NfcReader';
 
-function TabTwoScreen() {
+function NfcReaderScreen({ navigation }: RootTabScreenProps<'NfcReader'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>Read NFC</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <NfcReader />
     </View>
   );
 }
@@ -30,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TabTwoScreen;
+export default NfcReaderScreen;

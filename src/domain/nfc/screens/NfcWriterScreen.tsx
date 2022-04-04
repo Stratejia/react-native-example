@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { RootTabScreenProps } from '../../../types';
 import { View } from '../../../components/layout';
 import { Text } from '../../../components/typography';
+import NfcWriter from '../components/NfcWriter';
 
-function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+function NfcWriterScreen({ navigation }: RootTabScreenProps<'NfcWriter'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Write NFC</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <NfcWriter />
     </View>
   );
 }
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TabOneScreen;
+export default NfcWriterScreen;
