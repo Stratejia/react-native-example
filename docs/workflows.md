@@ -1,3 +1,5 @@
 # Workflows
 
-TODO
+We currently have the following workflows:
+
+- [Build frontend](../.github/workflows/build-frontend.yml)

@@ -24,5 +24,7 @@ module.exports = {
   },
   rules: {
     'import/extensions': ['off'],
+    'import/namespace': ['off'],
+    '@typescript-eslint/indent': ['off'],
   },
 };

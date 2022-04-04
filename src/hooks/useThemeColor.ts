@@ -4,7 +4,7 @@ import colors from '../styles/colors';
 declare type Props = {
   light?: string;
   dark?: string;
-}
+};
 
 declare type ColorName = keyof typeof colors.light & keyof typeof colors.dark;
 
