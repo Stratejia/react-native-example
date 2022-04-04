@@ -6,9 +6,10 @@ import {
   LinkingOptions,
 } from '@react-navigation/native';
 import RootNavigator from './RootNavigator';
+import { RootStackParamList } from '../../types';
 
 declare type Props = {
-  linking: LinkingOptions<ReactNavigation.RootParamList>;
+  linking: LinkingOptions<RootStackParamList>;
   colorScheme: ColorSchemeName;
 };
 

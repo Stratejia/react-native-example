@@ -19,7 +19,7 @@ function NfcReader() {
     <View style={styles.wrapper}>
       <TouchableOpacity onPress={handlePress}>
         <Text>Scan a Tag</Text>
-        {tag && <Text>Read tag: {tag}</Text>}
+        {tag ? <Text>Read tag: {tag}</Text> : null}
       </TouchableOpacity>
     </View>
   );
