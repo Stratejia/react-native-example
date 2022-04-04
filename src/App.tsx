@@ -6,7 +6,6 @@ import useColorScheme from './hooks/useColorScheme';
 import { Navigation } from './components/navigation';
 import routes from './router/routes';
 
-// TODO: Configure eslint correctly
 // TODO: Use paths from project root (src)
 // TODO: Use styled-components instead of react-native style sheets
 // TODO: Use i18n for translations
