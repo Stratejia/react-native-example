@@ -1138,7 +1138,7 @@
     xcode "^3.0.1"
     xml2js "0.4.23"
 
-"@expo/config-plugins@4.1.0", "@expo/config-plugins@^4.0.2":
+"@expo/config-plugins@4.1.0", "@expo/config-plugins@^4.0.16", "@expo/config-plugins@^4.0.2":
   version "4.1.0"
   resolved "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-4.1.0.tgz"
   integrity sha512-+Uq7kzi1StUZZZivnnqNV6+v8b+SMF6MDgH+cEZxCoM9uwLXOK0rTAURzBGtl+C6EEbKnoZmnKGuzABBGPRP7A==
@@ -6997,6 +6997,13 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-nfc-manager@^3.13.2:
+  version "3.13.2"
+  resolved "https://registry.yarnpkg.com/react-native-nfc-manager/-/react-native-nfc-manager-3.13.2.tgz#b5120f640fdf4adc8a37bb995b19f22ec449e973"
+  integrity sha512-FwfcVHc2qN6e6WOZ9XHhYoo+BP9JgSfWO82YkviXxIMBwuRHM4OaOCMALS3JhPXLSMNPBL2T637Y9ER23vHXKA==
+  dependencies:
+    "@expo/config-plugins" "^4.0.16"
 
 react-native-safe-area-context@3.3.2:
   version "3.3.2"
