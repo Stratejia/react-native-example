@@ -1,3 +1,5 @@
 # Docs
 
-All the documentation, articles, and other non-code written contents.
+- [Usage of NFCs](usage-of-nfcs.md)
+- [File structure](file-structure.md)
+- [Workflows](workflows.md)
