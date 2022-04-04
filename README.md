@@ -18,8 +18,6 @@ yarn start
 
 You can then choose if you want to start the app on web, Android or iOS.
 
-### Available scripts
-
 ## Available Scripts
 
 Scripts are listed in [`package.json`](src/package.json). Here are some of the most important ones
