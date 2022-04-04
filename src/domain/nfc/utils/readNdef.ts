@@ -5,6 +5,9 @@ async function readNdef() {
     await NfcManager.requestTechnology(NfcTech.Ndef);
     const tag = await NfcManager.getTag();
     console.log('Tag found', tag);
+    if (tag) {
+      return tag.toString();
+    }
   } catch (error) {
     console.error('Oops!', error);
   } finally {

@@ -26,5 +26,7 @@ module.exports = {
     'import/extensions': ['off'],
     'import/namespace': ['off'],
     '@typescript-eslint/indent': ['off'],
+    '@typescript-eslint/no-use-before-define': ['off'],
+    'react/react-in-jsx-scope': ['off'],
   },
 };

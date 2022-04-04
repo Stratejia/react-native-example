@@ -1,14 +1,14 @@
-import {useCallback, useState} from 'react';
-import {StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { useCallback, useState } from 'react';
+import { StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { View } from '../../../components/layout';
 import { Text } from '../../../components/typography';
 import writeNdef from '../utils/writeNdef';
 
 function NfcWriter() {
-  const [text, onChangeText] = useState<string>();
+  const [text, onChangeText] = useState('');
 
   const handlePress = useCallback(() => {
-    if (text) {
+    if (text && text !== '') {
       writeNdef(text);
     }
   }, [text]);
@@ -34,8 +34,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
+    color: '#fff',
     height: 40,
     margin: 12,
+    borderColor: '#fff',
     borderWidth: 1,
     padding: 10,
   },
