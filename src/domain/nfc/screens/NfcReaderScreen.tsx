@@ -1,14 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { RootTabScreenProps } from '../../../types';
 import { View } from '../../../components/layout';
 import { Text } from '../../../components/typography';
 import NfcReader from '../components/NfcReader';
 
-function NfcReaderScreen({ navigation }: RootTabScreenProps<'NfcReader'>) {
+function NfcReaderScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Read NFC</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
       <NfcReader />
     </View>
   );

@@ -16,7 +16,8 @@ function BottomTabNavigator() {
       initialRouteName="NfcReader"
       screenOptions={{
         tabBarActiveTintColor: colors[colorScheme].tint,
-      }}>
+      }}
+    >
       <BottomTab.Screen
         name="NfcReader"
         component={NfcReaderScreen}
