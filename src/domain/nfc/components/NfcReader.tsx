@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { View } from '../../../components/layout';
+import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import readNdef from '../utils/readNdef';
 

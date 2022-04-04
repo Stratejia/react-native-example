@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { View } from '../../../components/layout';
+import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import NfcWriter from '../components/NfcWriter';
 

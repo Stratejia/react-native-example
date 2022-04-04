@@ -4,7 +4,7 @@
 
 [![Build](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml/badge.svg)](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml)
 
-Proof of concept for a NFC reader and writer app using React-Native.
+Proof of concept for a NFC reader and writer app using React-Native and Expo.
 
 [Read the docs](docs/README.md)
 
