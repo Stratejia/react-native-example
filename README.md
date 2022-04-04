@@ -36,6 +36,14 @@ yarn test
 yarn test:watch # If you need to --watch
 ```
 
+### Eject app
+
+Generates native configuration to run the app on a real device.
+
+```bash
+yarn eject
+```
+
 ## Contributors
 
 <table>

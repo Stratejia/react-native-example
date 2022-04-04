@@ -5,6 +5,7 @@ Here's an explanation for the current file structure in this app:
 - `/docs`: Documentation on everything within this app
 - `/src`: Source code
   - `/.expo-shared`: Shared expo configuration
+  - `/android`: Android config
   - `/assets`: Static assets of app
     - `/fonts`: Fonts used in the app
     - `/images`: Images used in the app
@@ -21,6 +22,7 @@ Here's an explanation for the current file structure in this app:
       - `/screens`: NFC-specific screens
       - `/utils`: NFC-specific utility functions
   - `/hooks`: Generic hooks
+  - `/ios`: iOS config
   - `/router`: Routes definitions
   - `/styles`: Styles definitions
   - `.eslintrc.js`: Eslint config
@@ -28,6 +30,8 @@ Here's an explanation for the current file structure in this app:
   - `app.json`: Expo app config
   - `App.tsx`: App startup, root node
   - `babel.config.json`: Babel config
+  - `index.js`: Native entry point
+  - `metro.config.json`: Metro config
   - `package.json`: NPM package definition
   - `tsconfig.json`: TypeScript config
   - `types.d.ts`: Generic types definitions

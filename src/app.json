@@ -4,14 +4,19 @@
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
         "foregroundImage": "./assets/images/adaptive-icon.png"
-      }
+      },
+      "permissions": [
+        "android.permission.NFC"
+      ],
+      "package": "statejia.reactnativenfcpoc"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "icon": "./assets/images/icon.png",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "statejia.reactnativenfcpoc"
     },
     "name": "ReactNativeNfcPoc",
     "orientation": "portrait",
