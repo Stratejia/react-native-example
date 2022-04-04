@@ -2,6 +2,8 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
+[![Build Frontend](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build-frontend.yml/badge.svg)](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build-frontend.yml)
+
 Proof of concept for a NFC reader and writer app using React-Native.
 
 [Read the docs](docs/README.md)
