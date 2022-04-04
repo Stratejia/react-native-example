@@ -1,0 +1,205 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="statejia.reactnativenfcpoc"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:5:3-75
+11-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:5:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:2:3-64
+12-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.NFC" />
+13-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:3:3-59
+13-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:3:20-57
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:4:3-77
+14-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:4:20-75
+15    <uses-permission android:name="android.permission.VIBRATE" />
+15-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:6:3-63
+15-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:6:20-61
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:7:3-78
+16-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:7:20-76
+17
+18    <queries>
+18-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:8:3-14:13
+19        <intent>
+19-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:9:5-13:14
+20            <action android:name="android.intent.action.VIEW" />
+20-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:10:7-58
+20-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:10:15-56
+21
+22            <category android:name="android.intent.category.BROWSABLE" />
+22-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:11:7-67
+22-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:11:17-65
+23
+24            <data android:scheme="https" />
+24-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:7-37
+24-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:13-35
+25        </intent>
+26        <!-- Query open documents -->
+27        <intent>
+27-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-21:18
+28            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+28-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-79
+28-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:21-76
+29        </intent>
+30        <intent>
+30-->[:expo-web-browser] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:18
+31
+32            <!-- Required for opening tabs if targeting API 30 -->
+33            <action android:name="android.support.customtabs.action.CustomTabsService" />
+33-->[:expo-web-browser] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-90
+33-->[:expo-web-browser] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:21-87
+34        </intent>
+35    </queries>
+36
+37    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+37-->[com.facebook.flipper:flipper:0.54.0] /home/hackerman/.gradle/caches/transforms-3/62ece1a98ef095db320a1cbbfb42e6fd/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:5-76
+37-->[com.facebook.flipper:flipper:0.54.0] /home/hackerman/.gradle/caches/transforms-3/62ece1a98ef095db320a1cbbfb42e6fd/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:22-73
+38
+39    <uses-feature
+39-->[:react-native-nfc-manager] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/react-native-nfc-manager/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
+40        android:name="android.hardware.nfc"
+40-->[:react-native-nfc-manager] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/react-native-nfc-manager/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-44
+41        android:required="false" />
+41-->[:react-native-nfc-manager] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/react-native-nfc-manager/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-33
+42
+43    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+43-->[com.android.installreferrer:installreferrer:1.0] /home/hackerman/.gradle/caches/transforms-3/f8d9d5b7a93f5e5bcef518a4f624ca0a/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+43-->[com.android.installreferrer:installreferrer:1.0] /home/hackerman/.gradle/caches/transforms-3/f8d9d5b7a93f5e5bcef518a4f624ca0a/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+44
+45    <application
+45-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:3-35:17
+46        android:name="statejia.reactnativenfcpoc.MainApplication"
+46-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:16-47
+47        android:allowBackup="true"
+47-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:162-188
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.3.0] /home/hackerman/.gradle/caches/transforms-3/d15795c47be914585ca458b102a40944/transformed/core-1.3.0/AndroidManifest.xml:24:18-86
+49        android:debuggable="true"
+50        android:icon="@mipmap/ic_launcher"
+50-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:81-115
+51        android:label="@string/app_name"
+51-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:48-80
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:116-161
+53        android:theme="@style/AppTheme"
+53-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:189-220
+54        android:usesCleartextTraffic="true" >
+54-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:15:221-256
+55        <meta-data
+55-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:16:5-82
+56            android:name="expo.modules.updates.ENABLED"
+56-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:16:16-59
+57            android:value="true" />
+57-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:16:60-80
+58        <meta-data
+58-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:17:5-93
+59            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+59-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:17:16-68
+60            android:value="44.0.0" />
+60-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:17:69-91
+61        <meta-data
+61-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:18:5-105
+62            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+62-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:18:16-80
+63            android:value="ALWAYS" />
+63-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:18:81-103
+64        <meta-data
+64-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:19:5-99
+65            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+65-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:19:16-79
+66            android:value="0" />
+66-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:19:80-97
+67        <meta-data
+67-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:20:5-131
+68            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+68-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:20:16-67
+69            android:value="https://exp.host/@anonymous/ReactNativeNfcPoc" />
+69-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:20:68-129
+70
+71        <activity
+71-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:5-33:16
+72            android:name="statejia.reactnativenfcpoc.MainActivity"
+72-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:15-43
+73            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+73-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:77-154
+74            android:label="@string/app_name"
+74-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:44-76
+75            android:launchMode="singleTask"
+75-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:155-186
+76            android:screenOrientation="portrait"
+76-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:276-312
+77            android:theme="@style/Theme.App.SplashScreen"
+77-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:230-275
+78            android:windowSoftInputMode="adjustResize" >
+78-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:21:187-229
+79            <intent-filter>
+79-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:22:7-25:23
+80                <action android:name="android.intent.action.MAIN" />
+80-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:23:9-60
+80-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:23:17-58
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:24:9-68
+82-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:24:19-66
+83            </intent-filter>
+84            <intent-filter>
+84-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:26:7-32:23
+85                <action android:name="android.intent.action.VIEW" />
+85-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:10:7-58
+85-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:10:15-56
+86
+87                <category android:name="android.intent.category.DEFAULT" />
+87-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:28:9-67
+87-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:28:19-65
+88                <category android:name="android.intent.category.BROWSABLE" />
+88-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:11:7-67
+88-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:11:17-65
+89
+90                <data android:scheme="myapp" />
+90-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:7-37
+90-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:13-35
+91                <data android:scheme="statejia.reactnativenfcpoc" />
+91-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:7-37
+91-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:12:13-35
+92            </intent-filter>
+93        </activity>
+94        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+94-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:34:5-81
+94-->/home/hackerman/Dev/react-native-nfc-poc/src/android/app/src/main/AndroidManifest.xml:34:15-79
+95
+96        <provider
+96-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-34:20
+97            android:name="expo.modules.filesystem.FileSystemFileProvider"
+97-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-74
+98            android:authorities="statejia.reactnativenfcpoc.FileSystemFileProvider"
+98-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-74
+99            android:exported="false"
+99-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-37
+100            android:grantUriPermissions="true" >
+100-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-47
+101            <meta-data
+101-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-33:70
+102                android:name="android.support.FILE_PROVIDER_PATHS"
+102-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:32:17-67
+103                android:resource="@xml/file_system_provider_paths" />
+103-->[:expo-file-system] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:17-67
+104        </provider>
+105
+106        <meta-data
+106-->[:expo-modules-core] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:89
+107            android:name="org.unimodules.core.AppLoader#react-native-headless"
+107-->[:expo-modules-core] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+108            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+108-->[:expo-modules-core] /home/hackerman/Dev/react-native-nfc-poc/src/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-86
+109    </application>
+110
+111</manifest>

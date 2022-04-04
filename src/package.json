@@ -2,15 +2,18 @@
   "name": "react-native-nfc-poc",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo run:android",
+    "build:android": "eas build --profile development --platform android",
+    "build:configure": "eas build:configure",
+    "build:ios": "eas build --profile development --platform ios",
     "eject": "expo eject",
-    "ios": "expo run:ios",
     "lint": "eslint --ext ts,tsx .",
     "lint:fix": "eslint --fix --ext ts,tsx .",
+    "run:android": "expo run:android",
+    "run:ios": "expo run:ios",
     "start": "expo start --dev-client",
+    "start:web": "expo start --web",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watchAll --passWithNoTests",
-    "web": "expo start --web"
+    "test:watch": "jest --watchAll --passWithNoTests"
   },
   "jest": {
     "preset": "jest-expo"
@@ -45,6 +48,7 @@
     "@types/styled-components": "^5.1.24",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
+    "eas-cli": "^0.48.2",
     "eslint": "^8.12.0",
     "eslint-config-airbnb-typescript": "^16.1.2",
     "eslint-plugin-import": "^2.25.4",

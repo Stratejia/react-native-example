@@ -44,6 +44,22 @@ Generates native configuration to run the app on a real device.
 yarn eject
 ```
 
+### Build app
+
+```bash
+yarn build:android # For Android
+yarn build:ios # For iOS
+```
+
+### Run app
+
+```bash
+yarn start # Generic start, you can then choose which device
+yarn start:web
+yarn run:android
+yarn run:ios
+```
+
 ## Contributors
 
 <table>
