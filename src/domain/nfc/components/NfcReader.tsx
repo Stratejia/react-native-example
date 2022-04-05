@@ -1,26 +1,20 @@
-import { useCallback, useState } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, StyleSheet } from 'react-native';
+import { useQuery } from 'react-query';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import readNdef from '../utils/readNdef';
 
 function NfcReader() {
-  const [tag, setTag] = useState('');
-
-  const handlePress = useCallback(() => {
-    readNdef().then((readTag) => {
-      if (readTag) {
-        setTag(readTag);
-      }
-    });
-  }, [setTag]);
+  const { data, isLoading, error } = useQuery('ndef', readNdef, {
+    retry: true,
+  });
 
   return (
     <View style={styles.wrapper}>
-      <TouchableOpacity onPress={handlePress}>
-        <Text>Scan a Tag</Text>
-        {tag ? <Text>Read tag: {tag}</Text> : null}
-      </TouchableOpacity>
+      <Text>Scanning a tag...</Text>
+      {isLoading ? <ActivityIndicator /> : null}
+      {error ? <Text>{`ERROR: ${error}`}</Text> : null}
+      {data ? <Text>Read tag: {data}</Text> : null}
     </View>
   );
 }
