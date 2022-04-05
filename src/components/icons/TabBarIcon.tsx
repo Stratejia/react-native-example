@@ -2,7 +2,7 @@ import { ComponentProps } from 'react';
 import { StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-declare type Props = {
+type Props = {
   name: ComponentProps<typeof FontAwesome>['name'];
   color: string;
 };

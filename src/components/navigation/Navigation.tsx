@@ -8,7 +8,7 @@ import {
 import RootNavigator from './RootNavigator';
 import { RootStackParamList } from '../../types';
 
-declare type Props = {
+type Props = {
   linking: LinkingOptions<RootStackParamList>;
   colorScheme: ColorSchemeName;
 };
