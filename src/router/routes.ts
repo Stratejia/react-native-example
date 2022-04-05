@@ -1,7 +1,6 @@
 import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
-
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from '../types/navigation';
 
 const routes: LinkingOptions<RootStackParamList> = {
   // TODO: Replace deprecated makeUrl function

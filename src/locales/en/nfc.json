@@ -1,0 +1,7 @@
+{
+  "readNfc": "Read NFC",
+  "writeNfc": "Write NFC",
+  "scanningATag": "Scanning a tag...",
+  "readTag": "Read tag: {{tag}}",
+  "writeATag": "Write a tag"
+}

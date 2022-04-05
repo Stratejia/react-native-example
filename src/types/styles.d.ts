@@ -3,4 +3,4 @@ declare type ThemeProps = {
   darkColor?: string;
 };
 
-export default ThemeProps;
+export { ThemeProps };

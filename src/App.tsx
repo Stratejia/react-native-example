@@ -6,6 +6,7 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import { Navigation } from './components/navigation';
 import routes from './router/routes';
+import './i18n';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,7 +18,6 @@ const queryClient = new QueryClient({
 
 // TODO: Use paths from project root (src)
 // TODO: Use styled-components instead of react-native style sheets
-// TODO: Use i18n for translations
 function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();

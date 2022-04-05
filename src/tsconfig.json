@@ -2,5 +2,17 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true
-  }
+  },
+  "include": [
+    "components",
+    "domain",
+    "hooks",
+    "locales",
+    "router",
+    "styles",
+    ".eslintrc.js",
+    "App.tsx",
+    "i18n.ts",
+    "index.js"
+  ]
 }

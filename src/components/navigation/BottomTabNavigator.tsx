@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import useColorScheme from '../../hooks/useColorScheme';
 import { RootTabParamList } from '../../types/navigation';
@@ -10,6 +11,7 @@ import NfcWriterScreen from '../../domain/nfc/screens/NfcWriterScreen';
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
+  const { t } = useTranslation('navigation');
   const colorScheme = useColorScheme();
 
   return (
@@ -23,7 +25,7 @@ function BottomTabNavigator() {
         name="NfcReader"
         component={NfcReaderScreen}
         options={{
-          title: 'NFC Reader',
+          title: t('nfcReader'),
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
@@ -31,7 +33,7 @@ function BottomTabNavigator() {
         name="NfcWriter"
         component={NfcWriterScreen}
         options={{
-          title: 'NFC Writer',
+          title: t('nfcWriter'),
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

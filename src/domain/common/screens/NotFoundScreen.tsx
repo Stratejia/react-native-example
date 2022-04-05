@@ -1,15 +1,18 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { RootStackScreenProps } from '../../../types/navigation';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 
 function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
+  const { t } = useTranslation();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>This screen doesn't exist.</Text>
+      <Text style={styles.title}>{t('thisScreenDoesntExist')}</Text>
       <TouchableOpacity onPress={() => navigation.replace('Root')} style={styles.link}>
-        <Text style={styles.linkText}>Go to home screen!</Text>
+        <Text style={styles.linkText}>{t('goToHomeScreen')}</Text>
       </TouchableOpacity>
     </View>
   );

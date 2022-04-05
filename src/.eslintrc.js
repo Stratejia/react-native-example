@@ -1,8 +1,7 @@
 module.exports = {
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-  ],
+  root: true,
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'prettier'],
   extends: [
     '@react-native-community',
     'eslint:recommended',
@@ -13,15 +12,13 @@ module.exports = {
     'airbnb-typescript/base',
   ],
   parserOptions: {
-    project: [
-      './tsconfig.json',
-    ]
+    project: ['./tsconfig.json'],
   },
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json']
-      }
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts', '.json'],
+      },
     },
   },
   rules: {

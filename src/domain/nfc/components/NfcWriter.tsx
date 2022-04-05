@@ -1,11 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import { ActivityIndicator, Button, StyleSheet, TextInput } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { useMutation } from 'react-query';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import writeNdef from '../utils/writeNdef';
 
 function NfcWriter() {
+  const { t } = useTranslation('nfc');
   const { mutate, isLoading, error } = useMutation(writeNdef);
   const [text, onChangeText] = useState('');
 
@@ -20,7 +22,7 @@ function NfcWriter() {
   return (
     <View style={styles.wrapper}>
       <TextInput style={styles.input} onChangeText={onChangeText} value={text} />
-      <Button onPress={handlePress} title="Write a tag" accessibilityLabel="Write a tag" />
+      <Button onPress={handlePress} title={t('writeATag')} accessibilityLabel={t('writeATag')} />
       {isLoading ? <ActivityIndicator /> : null}
       {error ? <Text>{`ERROR: ${error}`}</Text> : null}
     </View>
