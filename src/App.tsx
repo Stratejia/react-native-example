@@ -7,8 +7,6 @@ import useColorScheme from './hooks/useColorScheme';
 import { Navigation } from './components/navigation';
 import routes from './router/routes';
 
-console.log('lint staged test');
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
