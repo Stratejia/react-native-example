@@ -16,7 +16,7 @@ const queryClient = new QueryClient({
   },
 });
 
-// TODO: Use paths from project root (src)
+// TODO: Use paths from project root (src) (also move most things out of src)
 // TODO: Use styled-components instead of react-native style sheets
 function App() {
   const isLoadingComplete = useCachedResources();
