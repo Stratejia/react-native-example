@@ -1,12 +1,14 @@
 module.exports = {
   plugins: [
     '@typescript-eslint',
+    'prettier',
   ],
   extends: [
     '@react-native-community',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
     'plugin:import/recommended',
     'airbnb-typescript/base',
   ],
