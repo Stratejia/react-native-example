@@ -19,16 +19,8 @@ function NfcWriter() {
 
   return (
     <View style={styles.wrapper}>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-      />
-      <Button
-        onPress={handlePress}
-        title="Write a tag"
-        accessibilityLabel="Write a tag"
-      />
+      <TextInput style={styles.input} onChangeText={onChangeText} value={text} />
+      <Button onPress={handlePress} title="Write a tag" accessibilityLabel="Write a tag" />
       {isLoading ? <ActivityIndicator /> : null}
       {error ? <Text>{`ERROR: ${error}`}</Text> : null}
     </View>

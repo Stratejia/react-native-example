@@ -34,4 +34,4 @@ Here's an explanation for the current file structure in this app:
   - `metro.config.json`: Metro config
   - `package.json`: NPM package definition
   - `tsconfig.json`: TypeScript config
-  - `types.d.ts`: Generic types definitions
+  - `navigation.d.ts`: Generic types definitions

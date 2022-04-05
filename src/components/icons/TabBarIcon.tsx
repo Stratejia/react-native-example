@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 import { StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 

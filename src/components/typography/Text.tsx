@@ -1,3 +1,4 @@
+import React from 'react';
 import { Text as DefaultText } from 'react-native';
 import ThemeProps from '../../styles/ThemeProps';
 import useThemeColor from '../../hooks/useThemeColor';

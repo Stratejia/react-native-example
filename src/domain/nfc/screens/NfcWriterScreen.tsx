@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
@@ -7,11 +8,7 @@ function NfcWriterScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Write NFC</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <NfcWriter />
     </View>
   );

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ActivityIndicator, StyleSheet } from 'react-native';
 import { useQuery } from 'react-query';
 import { View } from '../../../components/layouts';

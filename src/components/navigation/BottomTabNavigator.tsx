@@ -1,6 +1,7 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import useColorScheme from '../../hooks/useColorScheme';
-import { RootTabParamList } from '../../types';
+import { RootTabParamList } from '../../types/navigation';
 import { TabBarIcon } from '../icons';
 import colors from '../../styles/colors';
 import NfcReaderScreen from '../../domain/nfc/screens/NfcReaderScreen';
