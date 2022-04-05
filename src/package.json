@@ -1,12 +1,15 @@
 {
   "name": "react-native-nfc-poc",
   "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
   "scripts": {
     "build:android": "expo build:android",
     "build:ios": "expo build:ios",
     "eject": "expo eject",
     "lint": "eslint --ext ts,tsx .",
     "lint:fix": "eslint --fix --ext ts,tsx .",
+    "lint:staged": "lint-staged",
     "run:android": "expo run:android",
     "run:ios": "expo run:ios",
     "start": "expo start --dev-client",
@@ -55,11 +58,20 @@
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
     "jest": "^26.6.3",
     "jest-expo": "~44.0.1",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "react-test-renderer": "17.0.1",
     "typescript": "~4.3.5"
   },
-  "private": true
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  }
 }
