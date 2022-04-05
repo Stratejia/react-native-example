@@ -25,6 +25,7 @@ Here's an explanation for the current file structure in this app:
   - `/ios`: iOS config
   - `/router`: Routes definitions
   - `/styles`: Styles definitions
+  - `/types`: Types definitions
   - `.eslintrc.js`: Eslint config
   - `.prettierrc.js`: Prettier config
   - `app.json`: Expo app config
