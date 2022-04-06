@@ -1,24 +1,23 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
-import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
 import styled from 'styled-components/native';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
-import readNdef from '../utils/readNdef';
+import getRandomCatFacts from '../api/getRandomCatFacts';
 
-function NfcReader() {
-  const { t } = useTranslation('nfc');
-  const { data, isLoading, error } = useQuery('ndef', readNdef, {
-    retry: true,
-  });
+function CatFacts() {
+  const { data, isLoading, error } = useQuery('catFacts', getRandomCatFacts);
 
+  console.log(data);
+
+  // TODO: Display correctly cat facts
+  // TODO: Enhance error handling
   return (
     <Wrapper>
-      <Text>{t('scanningATag')}</Text>
       {isLoading && <ActivityIndicator />}
       {error && <Text>{`ERROR: ${error}`}</Text>}
-      {data && <Text>{t('readTag', { tag: data })}</Text>}
+      {data && <Text>We got data!</Text>}
     </Wrapper>
   );
 }
@@ -29,4 +28,4 @@ const Wrapper = styled(View)`
   align-items: center;
 `;
 
-export default memo(NfcReader);
+export default memo(CatFacts);

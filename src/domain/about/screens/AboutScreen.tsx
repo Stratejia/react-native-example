@@ -1,18 +1,18 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/native';
-import { Divider, View } from '../../../components/layouts';
+import { View, Divider } from '../../../components/layouts';
 import { ScreenTitle } from '../../../components/typography';
-import NfcWriter from '../components/NfcWriter';
+import About from '../components/About';
 
-function NfcWriterScreen() {
-  const { t } = useTranslation('nfc');
+function AboutScreen() {
+  const { t } = useTranslation('about');
 
   return (
     <Container>
-      <ScreenTitle>{t('writeNfc')}</ScreenTitle>
+      <ScreenTitle>{t('about')}</ScreenTitle>
       <Divider />
-      <NfcWriter />
+      <About />
     </Container>
   );
 }
@@ -23,4 +23,4 @@ const Container = styled(View)`
   justify-content: center;
 `;
 
-export default memo(NfcWriterScreen);
+export default memo(AboutScreen);

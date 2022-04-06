@@ -8,14 +8,14 @@ const routes: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          NfcReader: {
+          CatFacts: {
             screens: {
-              NfcReader: 'nfcReader',
+              CatFacts: 'catFacts',
             },
           },
-          NfcWriter: {
+          About: {
             screens: {
-              NfcWriter: 'nfcWriter',
+              About: 'about',
             },
           },
         },

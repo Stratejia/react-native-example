@@ -3,16 +3,16 @@ import { useTranslation } from 'react-i18next';
 import styled from 'styled-components/native';
 import { View, Divider } from '../../../components/layouts';
 import { ScreenTitle } from '../../../components/typography';
-import NfcReader from '../components/NfcReader';
+import CatFacts from '../components/CatFacts';
 
-function NfcReaderScreen() {
-  const { t } = useTranslation('nfc');
+function CatFactsScreen() {
+  const { t } = useTranslation('cats');
 
   return (
     <Container>
-      <ScreenTitle>{t('readNfc')}</ScreenTitle>
+      <ScreenTitle>{t('catFacts')}</ScreenTitle>
       <Divider />
-      <NfcReader />
+      <CatFacts />
     </Container>
   );
 }
@@ -23,4 +23,4 @@ const Container = styled(View)`
   justify-content: center;
 `;
 
-export default memo(NfcReaderScreen);
+export default memo(CatFactsScreen);
