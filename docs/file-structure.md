@@ -10,12 +10,13 @@ Here's an explanation for the current file structure in this app:
   - `/assets`: Static assets of app
     - `/fonts`: Fonts used in the app
     - `/images`: Images used in the app
-  - `/contexts`: Generic contexts (~HOCs)
   - `/components`: Generic components used throughout the app
     - `/icons`: Icons as components
     - `/layouts`: Layouts implemented by screen components
     - `/navigation`: Navigation-specific components
     - `/typography`: Text as components
+  - `/config`: Generic config (like feature flags)
+  - `/contexts`: Generic contexts (~HOCs)
   - `/domain`: Domain modules
     - `/common`: Generic domain module
       - `/screens`: Generic screens
@@ -24,6 +25,7 @@ Here's an explanation for the current file structure in this app:
       - `/screens`: NFC-specific screens
       - `/utils`: NFC-specific utility functions
   - `/hooks`: Generic hooks
+  - `/locales`: Translations
   - `/router`: Routes definitions
   - `/styles`: Styles definitions
   - `/types`: Types definitions
