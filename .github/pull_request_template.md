@@ -1,17 +1,27 @@
 ### Description
 
-Please explain the changes you made here.
+{please explain the changes you made here}
 
-### Your checklist for this pull request
+### Scout rule, helpful cleanups
 
-🚨 Please review the [guidelines for contributing](../../CONTRIBUTING.md) to this repository.
+- {write cleanup, or remove this section}
 
-- [ ] Check the commit's or even all commits' message styles matches our requested structure.
-- [ ] Code compiles correctly
-- [ ] Created tests which fail without the change (if possible)
-- [ ] All tests passing
-- [ ] Extended the README / documentation, if necessary
-- [ ] Added myself / the copyright holder to the AUTHORS file
-- [ ] keep pull requests small so they can be easily reviewed.
+### Issues
+
+Closes #{issue number}
+
+### General PR check list
+
+🚨 Please review the guidelines for contributing (`CONTRIBUTING.md`) to this repository.
+
+- [ ] Pass CI (build, tests, lint, ...)
+- [ ] Add tests for new domain logic
+- [ ] Update documentation (README + `/docs`) (remember that changes to the file structure must be explained in `/docs`)
+- [ ] Make sure PR author is listed in contributors
+- [ ] Keep PRs small, otherwise split into chunks
 
 Thank you for contributing!
+
+### Results
+
+{please provide a screenshot, console outputs or anything to help us see what changed}
