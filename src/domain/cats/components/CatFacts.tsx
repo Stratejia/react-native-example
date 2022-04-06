@@ -4,13 +4,11 @@ import { useQuery } from 'react-query';
 import { Body1 } from '../../../components/typography';
 import getRandomCatFacts from '../api/getRandomCatFacts';
 import { Card, CardContent } from '../../../components/surfaces';
+import { AnimalFact } from '../../../types/cats';
 import CatFactList from './CatFactList';
 
 function CatFacts() {
   const { data, isLoading, error } = useQuery('catFacts', getRandomCatFacts);
-
-  // TODO: Remove console log
-  console.log(data);
 
   // TODO: Enhance error handling
   return (
@@ -18,7 +16,7 @@ function CatFacts() {
       <CardContent>
         {isLoading && <ActivityIndicator />}
         {error && <Body1>{`ERROR: ${error}`}</Body1>}
-        {data && <CatFactList catFacts={data} />}
+        {data && <CatFactList catFacts={data as AnimalFact[]} />}
       </CardContent>
     </Card>
   );

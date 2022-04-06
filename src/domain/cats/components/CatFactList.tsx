@@ -8,12 +8,11 @@ type Props = {
 };
 
 function CatFactList({ catFacts }: Props) {
-  // TODO: Find a way for typescript to realize this is an AnimalFact list
   return (
-    <List
+    <List<React.ElementType>
       data={catFacts}
-      keyExtractor={item => item.createdAt}
-      renderItem={({ item }) => <CatFactListItem catFact={item} />}
+      keyExtractor={(item: AnimalFact) => item.createdAt}
+      renderItem={({ item }: { item: AnimalFact }) => <CatFactListItem catFact={item} />}
       ItemSeparatorComponent={() => <ListDivider />}
     />
   );
