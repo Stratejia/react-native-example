@@ -3,7 +3,7 @@ import * as Linking from 'expo-linking';
 import { RootStackParamList } from '../types/navigation';
 
 const routes: LinkingOptions<RootStackParamList> = {
-  prefixes: [Linking.makeUrl('/')],
+  prefixes: [Linking.createURL('/')],
   config: {
     screens: {
       Root: {
@@ -20,7 +20,6 @@ const routes: LinkingOptions<RootStackParamList> = {
           },
         },
       },
-      Modal: 'modal',
       NotFound: '*',
     },
   },

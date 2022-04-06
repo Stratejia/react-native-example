@@ -11,8 +11,6 @@ function NfcWriter() {
   const { mutate, isLoading, error } = useMutation(writeNdef);
   const [text, onChangeText] = useState('');
 
-  console.log(error);
-
   const handlePress = useCallback(() => {
     if (text && text !== '') {
       mutate(text);
