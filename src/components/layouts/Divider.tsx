@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
-import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
 import { colors, spacing } from '../../styles';
 import useThemeContext from '../../hooks/useThemeContext';
+import View from './View';
 
 function Divider() {
   const themeContext = useThemeContext();
-  const backgroundColor = useMemo(() => colors[themeContext.mode].divider, [themeContext]);
+  const backgroundColor = useMemo(() => colors[themeContext.mode].border, [themeContext]);
 
   return <StyledDivider backgroundColor={backgroundColor} />;
 }

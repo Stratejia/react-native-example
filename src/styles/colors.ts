@@ -1,11 +1,13 @@
 const light = {
-  divider: '#eee',
-  border: '#eee',
+  surface: '#fafafa',
+  onSurface: '#000',
+  border: '#b8c2ca',
 };
 
 const dark = {
-  divider: 'rgba(255,255,255,0.1)',
-  border: 'rgba(255,255,255,0.1)',
+  surface: '#222222',
+  onSurface: '#fff',
+  border: '#b8c2ca',
 };
 
 const colors = { light, dark };

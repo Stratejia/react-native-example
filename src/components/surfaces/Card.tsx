@@ -1,0 +1,33 @@
+import styled, { css } from 'styled-components/native';
+import { View } from '../layouts';
+import useThemeContext from '../../hooks/useThemeContext';
+import React, { useMemo } from 'react';
+import { colors, spacing } from '../../styles';
+
+type Props = {
+  children: Element;
+};
+
+function Card({ children }: Props) {
+  const themeContext = useThemeContext();
+  const backgroundColor = useMemo(() => colors[themeContext.mode].surface, [themeContext]);
+  const color = useMemo(() => colors[themeContext.mode].onSurface, [themeContext]);
+
+  return (
+    <StyledCard backgroundColor={backgroundColor} color={color}>
+      {children}
+    </StyledCard>
+  );
+}
+
+const StyledCard = styled(View)<{ backgroundColor: string; color: string }>(
+  ({ backgroundColor, color }) => css`
+    background-color: ${backgroundColor};
+    color: ${color};
+    border-radius: ${spacing.xxs};
+    display: flex;
+    flex-direction: column;
+  `,
+);
+
+export default Card;

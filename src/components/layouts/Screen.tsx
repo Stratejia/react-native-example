@@ -6,7 +6,6 @@ const Screen = styled(View)`
   padding: ${spacing.l};
   flex: 1;
   align-items: center;
-  justify-content: center;
 `;
 
 export default Screen;
