@@ -5,6 +5,7 @@ import styled from 'styled-components/native';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import getRandomCatFacts from '../api/getRandomCatFacts';
+import { List, ListItem, ListItemText } from '../../../components/data';
 
 function CatFacts() {
   const { data, isLoading, error } = useQuery('catFacts', getRandomCatFacts);
@@ -17,7 +18,18 @@ function CatFacts() {
     <Wrapper>
       {isLoading && <ActivityIndicator />}
       {error && <Text>{`ERROR: ${error}`}</Text>}
-      {data && <Text>We got data!</Text>}
+      {data && (
+        <List
+          data={data}
+          renderItem={({ item }) => (
+            <ListItem>
+              <ListItemText>
+                <Text>{item.text}</Text>
+              </ListItemText>
+            </ListItem>
+          )}
+        />
+      )}
     </Wrapper>
   );
 }
