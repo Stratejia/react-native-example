@@ -11,7 +11,6 @@ function TabBarIcon(props: Props) {
   return <FontAwesome size={30} style={styles.icon} {...props} />;
 }
 
-// TODO: Never use negative margins
 const styles = StyleSheet.create({
   icon: {
     marginBottom: -3,

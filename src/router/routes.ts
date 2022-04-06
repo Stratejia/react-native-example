@@ -3,7 +3,6 @@ import * as Linking from 'expo-linking';
 import { RootStackParamList } from '../types/navigation';
 
 const routes: LinkingOptions<RootStackParamList> = {
-  // TODO: Replace deprecated makeUrl function
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
