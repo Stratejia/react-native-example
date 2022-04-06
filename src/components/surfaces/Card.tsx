@@ -1,11 +1,11 @@
+import React, { ReactNode, useMemo } from 'react';
 import styled, { css } from 'styled-components/native';
 import { View } from '../layouts';
 import useThemeContext from '../../hooks/useThemeContext';
-import React, { useMemo } from 'react';
 import { colors, spacing } from '../../styles';
 
 type Props = {
-  children: Element;
+  children: ReactNode;
 };
 
 function Card({ children }: Props) {
