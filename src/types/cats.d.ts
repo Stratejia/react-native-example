@@ -1,7 +1,7 @@
 declare type AnimalFact = {
   user: string;
   text: string;
-  updatedAt: number;
+  createdAt: number;
   source: string;
   type: string;
 };

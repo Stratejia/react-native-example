@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native';
-import Text from './Text';
+import Typography from './Typography';
 
-const Link = styled(Text)(
+const Link = styled(Typography)(
   ({ theme }) => css`
     text-decoration: underline;
     text-decoration-color: ${theme.tint};

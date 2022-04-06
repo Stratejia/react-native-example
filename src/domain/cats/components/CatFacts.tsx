@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { useQuery } from 'react-query';
-import { Text } from '../../../components/typography';
+import { Body1 } from '../../../components/typography';
 import getRandomCatFacts from '../api/getRandomCatFacts';
 import { Card, CardContent } from '../../../components/surfaces';
 import CatFactList from './CatFactList';
@@ -17,7 +17,7 @@ function CatFacts() {
     <Card>
       <CardContent>
         {isLoading && <ActivityIndicator />}
-        {error && <Text>{`ERROR: ${error}`}</Text>}
+        {error && <Body1>{`ERROR: ${error}`}</Body1>}
         {data && <CatFactList catFacts={data} />}
       </CardContent>
     </Card>

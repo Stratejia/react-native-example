@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
-import Text from './Text';
+import Typography from './Typography';
+import { fonts } from '../../styles';
 
-// TODO: fonts constant in styles?
-const ScreenTitle = styled(Text)`
-  font-size: 20px;
-  font-weight: bold;
+const ScreenTitle = styled(Typography)`
+  font-size: ${fonts.sizes.l};
+  font-weight: ${fonts.weights.bold};
 `;
 
 export default ScreenTitle;

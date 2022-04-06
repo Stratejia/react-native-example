@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
-import Text from './Text';
+import Typography from './Typography';
 
-const MonoText = styled(Text)`
+// TODO: Move font family to fonts constants?
+const MonoText = styled(Typography)`
   font-family: 'space-mono', monospace;
 `;
 

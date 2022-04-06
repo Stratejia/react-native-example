@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Text } from '../../../components/typography';
+import { Body1, Caption } from '../../../components/typography';
 import { ListItem, ListItemText } from '../../../components/data';
 import { AnimalFact } from '../../../types/cats';
 
@@ -8,11 +8,13 @@ type Props = {
 };
 
 function CatFactListItem({ catFact }: Props) {
-  // TODO: Display correctly cat facts
+  // TODO: Display date correctly
+  // TODO: Display user name? (requires one more API call)
   return (
     <ListItem>
       <ListItemText>
-        <Text>{catFact.text}</Text>
+        <Body1>{catFact.text}</Body1>
+        <Caption>{`${catFact.createdAt} - ${catFact.user}`}</Caption>
       </ListItemText>
     </ListItem>
   );

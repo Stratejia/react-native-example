@@ -6,6 +6,7 @@ const ListItem = styled(View)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  align-self: flex-start;
   text-align: left;
   padding: ${spacing.xs} ${spacing.m};
 `;
