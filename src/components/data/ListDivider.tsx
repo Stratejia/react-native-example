@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
+import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { View } from '../layouts';
 import useThemeContext from '../../hooks/useThemeContext';
 import { colors } from '../../styles';
 
@@ -13,7 +13,6 @@ function ListDivider() {
 
 const StyledListDivider = styled(View)<{ borderColor: string }>(
   ({ borderColor }) => css`
-    background-color: transparent;
     border-width: 0;
     border-color: ${borderColor};
     border-style: solid;

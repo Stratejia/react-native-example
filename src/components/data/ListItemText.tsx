@@ -1,5 +1,5 @@
+import { View } from 'react-native';
 import styled from 'styled-components/native';
-import { View } from '../layouts';
 import { spacing } from '../../styles';
 
 const ListItemText = styled(View)`
