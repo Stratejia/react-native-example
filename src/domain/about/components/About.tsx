@@ -1,15 +1,13 @@
 import React, { memo, useCallback } from 'react';
 import { Linking } from 'react-native';
+import { STRATEJIA_URL } from 'react-native-dotenv';
 import { Trans } from 'react-i18next';
 import { Link, Body1 } from '../../../components/typography';
 import { Card, CardContent } from '../../../components/surfaces';
 
-// TODO: Move to env vars
-const statejiaUrl = 'https://www.stratejia.ca';
-
 function About() {
   const handlePress = useCallback(() => {
-    Linking.openURL(statejiaUrl);
+    Linking.openURL(STRATEJIA_URL);
   }, []);
 
   return (

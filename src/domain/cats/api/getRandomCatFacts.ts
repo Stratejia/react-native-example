@@ -1,11 +1,10 @@
+import { CAT_FACTS_BASE_URL } from 'react-native-dotenv';
 import axios from 'axios';
 import mockedCatFacts from '../mocks/catFacts';
 import getFeaturesEnv from '../../../config/features-env';
 import { AnimalFact } from '../../../types/cats';
 
-// TODO: Move base URL to env vars
-const baseUrl = 'https://cat-fact.herokuapp.com';
-const endpoint = `${baseUrl}/facts/random`;
+const endpoint = `${CAT_FACTS_BASE_URL}/facts/random`;
 const animalType = 'cat';
 const amount = 3;
 
