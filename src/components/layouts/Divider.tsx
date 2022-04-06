@@ -6,7 +6,7 @@ import useThemeContext from '../../hooks/useThemeContext';
 
 function Divider() {
   const themeContext = useThemeContext();
-  const backgroundColor = useMemo(() => colors[themeContext.mode].divider, [themeContext]);
+  const backgroundColor = useMemo(() => colors[themeContext.mode].border, [themeContext]);
 
   return <StyledDivider backgroundColor={backgroundColor} />;
 }

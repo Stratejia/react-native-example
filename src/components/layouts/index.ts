@@ -1,4 +1,4 @@
 import Divider from './Divider';
-import View from './View';
+import Screen from './Screen';
 
-export { Divider, View };
+export { Divider, Screen };

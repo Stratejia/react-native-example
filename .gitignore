@@ -16,3 +16,6 @@ web-build/
 
 # JetBrains
 .idea
+
+# env vars
+.env.development.local

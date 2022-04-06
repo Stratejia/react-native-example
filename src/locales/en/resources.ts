@@ -1,9 +1,11 @@
 import common from './common.json';
 import navigation from './navigation.json';
-import nfc from './nfc.json';
+import cats from './cats.json';
+import about from './about.json';
 
 export const resources = {
   common,
   navigation,
-  nfc,
+  cats,
+  about,
 } as const;
