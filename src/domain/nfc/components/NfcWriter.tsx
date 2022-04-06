@@ -1,7 +1,9 @@
-import React, { useCallback, useState } from 'react';
-import { ActivityIndicator, Button, StyleSheet, TextInput } from 'react-native';
+import React, { memo, useCallback, useState } from 'react';
+import { ActivityIndicator, Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useMutation } from 'react-query';
+import styled from 'styled-components/native';
+import { TextInput } from '../../../components/inputs';
 import { View } from '../../../components/layouts';
 import { Text } from '../../../components/typography';
 import writeNdef from '../utils/writeNdef';
@@ -18,30 +20,19 @@ function NfcWriter() {
   }, [text, mutate]);
 
   return (
-    <View style={styles.wrapper}>
-      <TextInput style={styles.input} onChangeText={onChangeText} value={text} />
+    <Wrapper>
+      <TextInput onChangeText={onChangeText} value={text} />
       <Button onPress={handlePress} title={t('writeATag')} accessibilityLabel={t('writeATag')} />
       {isLoading ? <ActivityIndicator /> : null}
       {error ? <Text>{`ERROR: ${error}`}</Text> : null}
-    </View>
+    </Wrapper>
   );
 }
 
-const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  input: {
-    color: '#fff',
-    height: 40,
-    minWidth: 120,
-    margin: 12,
-    borderColor: '#fff',
-    borderWidth: 1,
-    padding: 10,
-  },
-});
+const Wrapper = styled(View)`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
 
-export default NfcWriter;
+export default memo(NfcWriter);

@@ -1,42 +1,30 @@
-import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import React, { memo, useCallback } from 'react';
+import { Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import styled from 'styled-components/native';
 import { RootStackScreenProps } from '../../../types/navigation';
 import { View } from '../../../components/layouts';
-import { Text } from '../../../components/typography';
+import { ScreenTitle } from '../../../components/typography';
+import { spacing } from '../../../styles';
 
 function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
   const { t } = useTranslation();
 
+  const handlePress = useCallback(() => navigation.replace('Root'), [navigation]);
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{t('thisScreenDoesntExist')}</Text>
-      <TouchableOpacity onPress={() => navigation.replace('Root')} style={styles.link}>
-        <Text style={styles.linkText}>{t('goToHomeScreen')}</Text>
-      </TouchableOpacity>
-    </View>
+    <Container>
+      <ScreenTitle>{t('thisScreenDoesntExist')}</ScreenTitle>
+      <Button onPress={handlePress} title={t('goToHomeScreen')} accessibilityLabel={t('goToHomeScreen')} />
+    </Container>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
-});
+const Container = styled(View)`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: ${spacing.m};
+`;
 
-export default NotFoundScreen;
+export default memo(NotFoundScreen);

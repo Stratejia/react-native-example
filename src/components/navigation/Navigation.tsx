@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ColorSchemeName } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme, LinkingOptions } from '@react-navigation/native';
 import RootNavigator from './RootNavigator';
@@ -17,4 +17,4 @@ function Navigation({ linking, colorScheme }: Props) {
   );
 }
 
-export default Navigation;
+export default memo(Navigation);

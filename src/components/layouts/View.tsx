@@ -1,17 +1,10 @@
-import React from 'react';
 import { View as DefaultView } from 'react-native';
-import { ThemeProps } from '../../types/styles';
-import useThemeColor from '../../hooks/useThemeColor';
+import styled, { css } from 'styled-components/native';
 
-type ViewProps = ThemeProps & DefaultView['props'];
-
-function View(props: ViewProps) {
-  const { style, lightColor, darkColor, ...otherProps } = props;
-  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
-
-  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
-}
+const View = styled(DefaultView)(
+  ({ theme }) => css`
+    background-color: ${theme.background};
+  `,
+);
 
 export default View;
-
-export { ViewProps };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types/navigation';
@@ -18,4 +18,4 @@ function RootNavigator() {
   );
 }
 
-export default RootNavigator;
+export default memo(RootNavigator);

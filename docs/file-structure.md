@@ -10,6 +10,7 @@ Here's an explanation for the current file structure in this app:
   - `/assets`: Static assets of app
     - `/fonts`: Fonts used in the app
     - `/images`: Images used in the app
+  - `/contexts`: Generic contexts (~HOCs)
   - `/components`: Generic components used throughout the app
     - `/icons`: Icons as components
     - `/layouts`: Layouts implemented by screen components

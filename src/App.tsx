@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import { Navigation } from './components/navigation';
+import ThemeProvider from './contexts/ThemeProvider';
 import routes from './router/routes';
 import './i18n';
 
@@ -25,12 +26,14 @@ function App() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <SafeAreaProvider>
-        <Navigation linking={routes} colorScheme={colorScheme} />
-        <StatusBar />
-      </SafeAreaProvider>
-    </QueryClientProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <SafeAreaProvider>
+          <Navigation linking={routes} colorScheme={colorScheme} />
+          <StatusBar />
+        </SafeAreaProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 
