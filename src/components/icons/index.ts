@@ -1,3 +1,3 @@
-import TabBarIcon from './TabBarIcon';
+import { CatIcon, ErrorIcon, InfoIcon, QuestionIcon, SuccessIcon, WarningIcon } from './faIcons';
 
-export { TabBarIcon };
+export { CatIcon, ErrorIcon, InfoIcon, QuestionIcon, SuccessIcon, WarningIcon };

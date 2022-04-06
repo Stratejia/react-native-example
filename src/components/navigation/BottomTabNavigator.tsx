@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RootTabParamList } from '../../types/navigation';
-import { TabBarIcon } from '../icons';
+import { CatIcon, QuestionIcon } from '../icons';
 import useTheme from '../../hooks/useTheme';
 import CatFactsScreen from '../../domain/cats/screens/CatFactsScreen';
 import AboutScreen from '../../domain/about/screens/AboutScreen';
@@ -25,7 +25,7 @@ function BottomTabNavigator() {
         component={CatFactsScreen}
         options={{
           title: t('catFacts'),
-          tabBarIcon: ({ color }) => <TabBarIcon name="cat" color={color} />,
+          tabBarIcon: ({ color }) => <CatIcon size={20} color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -33,7 +33,7 @@ function BottomTabNavigator() {
         component={AboutScreen}
         options={{
           title: t('about'),
-          tabBarIcon: ({ color }) => <TabBarIcon name="question" color={color} />,
+          tabBarIcon: ({ color }) => <QuestionIcon size={20} color={color} />,
         }}
       />
     </BottomTab.Navigator>

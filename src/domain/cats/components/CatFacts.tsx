@@ -1,21 +1,22 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { useQuery } from 'react-query';
-import { Body1 } from '../../../components/typography';
 import getRandomCatFacts from '../api/getRandomCatFacts';
 import { Card, CardContent } from '../../../components/surfaces';
+import { Error } from '../../../components/feedback';
 import { AnimalFact } from '../../../types/cats';
 import CatFactList from './CatFactList';
+import { useTranslation } from 'react-i18next';
 
 function CatFacts() {
-  const { data, isLoading, error } = useQuery('catFacts', getRandomCatFacts);
+  const { t } = useTranslation('cats');
+  const { data, isLoading, isError } = useQuery('catFacts', getRandomCatFacts);
 
-  // TODO: Enhance error handling
   return (
     <Card>
       <CardContent>
         {isLoading && <ActivityIndicator />}
-        {error && <Body1>{`ERROR: ${error}`}</Body1>}
+        {isError && <Error text={t('couldNotGetCatFacts')} />}
         {data && <CatFactList catFacts={data as AnimalFact[]} />}
       </CardContent>
     </Card>
