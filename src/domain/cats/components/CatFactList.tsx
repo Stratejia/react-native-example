@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { View } from 'react-native';
 import { List, ListDivider } from '../../../components/data';
 import { AnimalFact } from '../../../types/cats';
 import CatFactListItem from './CatFactListItem';
@@ -13,12 +12,9 @@ function CatFactList({ catFacts }: Props) {
   return (
     <List
       data={catFacts}
-      renderItem={({ item, index }) => (
-        <View key={index}>
-          <CatFactListItem key={index} catFact={item} />
-          <ListDivider />
-        </View>
-      )}
+      keyExtractor={item => item.createdAt}
+      renderItem={({ item }) => <CatFactListItem catFact={item} />}
+      ItemSeparatorComponent={() => <ListDivider />}
     />
   );
 }
