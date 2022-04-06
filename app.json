@@ -3,31 +3,25 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
-        "foregroundImage": "./assets/images/adaptive-icon.png"
+        "foregroundImage": "./src/assets/images/adaptive-icon.png"
       },
-      "permissions": [
-        "android.permission.NFC"
-      ],
+      "permissions": ["android.permission.NFC"],
       "package": "statejia.reactnativenfcpoc"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "icon": "./assets/images/icon.png",
+    "assetBundlePatterns": ["./src/**/*"],
+    "icon": "./src/assets/images/icon.png",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "statejia.reactnativenfcpoc"
     },
     "name": "ReactNativeNfcPoc",
     "orientation": "portrait",
-    "plugins": [
-      "react-native-nfc-manager"
-    ],
+    "plugins": ["react-native-nfc-manager"],
     "scheme": "myapp",
     "slug": "ReactNativeNfcPoc",
     "splash": {
       "backgroundColor": "#ffffff",
-      "image": "./assets/images/splash.png",
+      "image": "./src/assets/images/splash.png",
       "resizeMode": "contain"
     },
     "updates": {
@@ -36,7 +30,7 @@
     "userInterfaceStyle": "automatic",
     "version": "1.0.0",
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./src/assets/images/favicon.png"
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "strict": true
+  },
+  "include": ["src", ".eslintrc.js", "babel.config.js", "metro.config.js"]
+}

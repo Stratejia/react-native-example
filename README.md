@@ -1,6 +1,7 @@
 # React-Native NFC PoC
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 [![Build](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml/badge.svg)](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml)
 
@@ -10,7 +11,7 @@ Proof of concept for a NFC reader and writer app using React-Native and Expo.
 
 ## Available Scripts
 
-Scripts are listed in [`package.json`](src/package.json). Here are some of the most important ones
+Scripts are listed in [`package.json`](package.json). Here are some of the most important ones
 
 ### Lint app
 
