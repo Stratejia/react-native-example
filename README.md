@@ -1,11 +1,11 @@
-# React-Native NFC PoC
+# React-Native Template
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 [![Build](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml/badge.svg)](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml)
 
-Proof of concept for a NFC reader and writer app using React-Native and Expo.
+React-Native template, using TypeScript, styled-components and expo
 
 [Read the docs](docs/README.md)
 
