@@ -1,13 +1,13 @@
 import React, { ComponentProps } from 'react';
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 type Props = {
-  name: ComponentProps<typeof FontAwesome>['name'];
+  name: ComponentProps<typeof FontAwesome5>['name'];
   color: string;
 };
 
 function TabBarIcon(props: Props) {
-  return <FontAwesome size={30} {...props} />;
+  return <FontAwesome5 size={30} {...props} />;
 }
 
 export default TabBarIcon;

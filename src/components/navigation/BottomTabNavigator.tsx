@@ -13,7 +13,6 @@ function BottomTabNavigator() {
   const { t } = useTranslation('navigation');
   const theme = useTheme();
 
-  // TODO: Change icons
   return (
     <BottomTab.Navigator
       initialRouteName="CatFacts"
@@ -26,7 +25,7 @@ function BottomTabNavigator() {
         component={CatFactsScreen}
         options={{
           title: t('catFacts'),
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="cat" color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -34,7 +33,7 @@ function BottomTabNavigator() {
         component={AboutScreen}
         options={{
           title: t('about'),
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="question" color={color} />,
         }}
       />
     </BottomTab.Navigator>
