@@ -16,9 +16,9 @@ function NfcReader() {
   return (
     <Wrapper>
       <Text>{t('scanningATag')}</Text>
-      {isLoading ? <ActivityIndicator /> : null}
-      {error ? <Text>{`ERROR: ${error}`}</Text> : null}
-      {data ? <Text>{t('readTag', { tag: data })}</Text> : null}
+      {isLoading && <ActivityIndicator />}
+      {error && <Text>{`ERROR: ${error}`}</Text>}
+      {data && <Text>{t('readTag', { tag: data })}</Text>}
     </Wrapper>
   );
 }

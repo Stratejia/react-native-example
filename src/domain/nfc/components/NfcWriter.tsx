@@ -23,8 +23,8 @@ function NfcWriter() {
     <Wrapper>
       <TextInput onChangeText={onChangeText} value={text} />
       <Button onPress={handlePress} title={t('writeATag')} accessibilityLabel={t('writeATag')} />
-      {isLoading ? <ActivityIndicator /> : null}
-      {error ? <Text>{`ERROR: ${error}`}</Text> : null}
+      {isLoading && <ActivityIndicator />}
+      {error && <Text>{`ERROR: ${error}`}</Text>}
     </Wrapper>
   );
 }
