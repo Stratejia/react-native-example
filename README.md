@@ -13,6 +13,12 @@ React-Native template, using TypeScript, styled-components and expo
 
 Scripts are listed in [`package.json`](package.json). Here are some of the most important ones
 
+### Install dependencies
+
+```bash
+yarn
+```
+
 ### Lint app
 
 ```bash

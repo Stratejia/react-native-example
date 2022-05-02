@@ -4,7 +4,7 @@ import mockedCatFacts from '../mocks/catFacts';
 import getFeaturesEnv from '../../../config/features-env';
 import { AnimalFact } from '../../../types/cats';
 
-const endpoint = `${CAT_FACTS_BASE_URL}/acts/random`;
+const endpoint = `${CAT_FACTS_BASE_URL}/facts/random`;
 const animalType = 'cat';
 const amount = 3;
 
