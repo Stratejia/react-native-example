@@ -1,11 +1,11 @@
 const sizes = {
-  xxs: '.625rem', // 10 px
-  xs: '.75rem', // 12 px
-  s: '.875rem', // 14 px
-  m: '1rem', // 16 px
-  l: '1.5rem', // 24 px
-  xl: '2.25rem', // 36 px
-  xxl: '3rem', // 48 px
+  xxs: '10px',
+  xs: '12px',
+  s: '14px',
+  m: '16px',
+  l: '24px',
+  xl: '36px',
+  xxl: '48px',
 };
 
 const weights = {
