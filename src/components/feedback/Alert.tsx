@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import Body1 from 'components/typography/Body1';
-import { Severity } from 'types/feedback';
-import useThemeContext from 'hooks/useThemeContext';
-import colors from 'styles/colors';
-import spacing from 'styles/spacing';
-import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from 'components/icons/faIcons';
+import { Severity } from '../../types/feedback';
+import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
+import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '../icons/faIcons';
+import spacing from '../../styles/spacing';
+import Body1 from '../typography/Body1';
 
 type AlertIconProps = {
   readonly severity: Severity;

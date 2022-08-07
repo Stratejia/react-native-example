@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import styled from 'styled-components/native';
-import Alert from 'components/feedback/Alert';
+import Alert from './Alert';
 
 type Props = {
   readonly text: string;

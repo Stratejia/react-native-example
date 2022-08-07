@@ -2,10 +2,10 @@ import React, { memo, useCallback } from 'react';
 import { Linking } from 'react-native';
 import { STRATEJIA_URL } from 'react-native-dotenv';
 import { Trans } from 'react-i18next';
-import Link from 'components/typography/Link';
-import Body1 from 'components/typography/Body1';
-import Card from 'components/surfaces/Card';
-import CardContent from 'components/surfaces/CardContent';
+import Card from '../../../components/surfaces/Card';
+import CardContent from '../../../components/surfaces/CardContent';
+import Body1 from '../../../components/typography/Body1';
+import Link from '../../../components/typography/Link';
 
 function About() {
   const handlePress = useCallback(() => {

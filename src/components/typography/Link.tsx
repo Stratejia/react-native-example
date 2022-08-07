@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import Typography from 'components/typography/Typography';
+import Typography from './Typography';
 
 const Link = styled(Typography)(
   ({ theme }) => css`

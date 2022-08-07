@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import styled from 'styled-components/native';
-import spacing from 'styles/spacing';
+import spacing from '../../styles/spacing';
 
 const ListItem = styled(View)`
   display: flex;

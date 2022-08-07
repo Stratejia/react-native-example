@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import AboutScreen from 'domain/about/screens/AboutScreen';
-import CatFactsScreen from 'domain/cats/screens/CatFactsScreen';
-import { RootTabParamList } from 'types/navigation';
-import { CatIcon, QuestionIcon } from 'components/icons/faIcons';
-import useTheme from 'hooks/useTheme';
+import { RootTabParamList } from '../../types/navigation';
+import useTheme from '../../hooks/useTheme';
+import CatFactsScreen from '../../domain/cats/screens/CatFactsScreen';
+import AboutScreen from '../../domain/about/screens/AboutScreen';
+import { CatIcon, QuestionIcon } from '../icons/faIcons';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 

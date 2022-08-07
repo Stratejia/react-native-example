@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { TextInput as DefaultTextInput } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import colors from 'styles/colors';
-import spacing from 'styles/spacing';
-import useThemeContext from 'hooks/useThemeContext';
+import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
+import spacing from '../../styles/spacing';
 
 function TextInput() {
   const themeContext = useThemeContext();

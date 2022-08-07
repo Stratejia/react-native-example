@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
-import CatFactListItem from 'domain/cats/components/CatFactListItem';
-import List from 'components/data/List';
-import ListDivider from 'components/data/ListDivider';
-import { AnimalFact } from 'types/cats';
+import { AnimalFact } from '../../../types/cats';
+import List from '../../../components/data/List';
+import ListDivider from '../../../components/data/ListDivider';
+import CatFactListItem from './CatFactListItem';
 
 type Props = {
   readonly catFacts: readonly AnimalFact[];

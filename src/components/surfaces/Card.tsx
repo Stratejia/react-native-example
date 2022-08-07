@@ -1,9 +1,9 @@
 import React, { ReactNode, useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import useThemeContext from 'hooks/useThemeContext';
-import colors from 'styles/colors';
-import spacing from 'styles/spacing';
+import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
+import spacing from '../../styles/spacing';
 
 type Props = {
   readonly children: ReactNode;

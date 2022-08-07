@@ -1,7 +1,7 @@
 import React, { createContext, memo, ReactNode, useMemo, useState } from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components/native';
-import { ThemeMode } from 'types/styles';
-import { getTheme } from 'styles/theme';
+import { getTheme } from '../styles/theme';
+import { ThemeMode } from '../types/styles';
 
 const defaultMode = 'dark';
 

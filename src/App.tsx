@@ -2,12 +2,12 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Navigation from 'components/navigation/Navigation';
-import useCachedResources from 'hooks/useCachedResources';
-import useColorScheme from 'hooks/useColorScheme';
-import ThemeProvider from 'contexts/ThemeProvider';
-import routes from 'router/routes';
-import 'i18n';
+import Navigation from './components/navigation/Navigation';
+import useCachedResources from './hooks/useCachedResources';
+import useColorScheme from './hooks/useColorScheme';
+import ThemeProvider from './contexts/ThemeProvider';
+import routes from './router/routes';
+import './i18n';
 
 const queryClient = new QueryClient({
   defaultOptions: {

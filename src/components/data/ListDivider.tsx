@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import useThemeContext from 'hooks/useThemeContext';
-import colors from 'styles/colors';
+import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
 
 function ListDivider() {
   const themeContext = useThemeContext();

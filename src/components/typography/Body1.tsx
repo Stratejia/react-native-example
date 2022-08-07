@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import Typography from 'components/typography/Typography';
+import Typography from './Typography';
 
 const Body1 = styled(Typography)``;
 

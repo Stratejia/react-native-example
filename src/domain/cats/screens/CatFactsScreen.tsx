@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import CatFacts from 'domain/cats/components/CatFacts';
-import Divider from 'components/layouts/Divider';
-import Screen from 'components/layouts/Screen';
-import ScreenTitle from 'components/typography/ScreenTitle';
+import ScreenTitle from '../../../components/typography/ScreenTitle';
+import CatFacts from '../components/CatFacts';
+import Divider from '../../../components/layouts/Divider';
+import Screen from '../../../components/layouts/Screen';
 
 function CatFactsScreen() {
   const { t } = useTranslation('cats');

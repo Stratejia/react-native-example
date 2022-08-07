@@ -33,7 +33,8 @@ module.exports = {
     eqeqeq: 'warn',
     'prefer-template': 'warn',
     'func-style': ['warn', 'declaration'],
-    'no-restricted-imports': ['warn', { patterns: ['.*'] }],
+    // TODO: Add this rule once baseUrl (root dir) is fixed
+    // 'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'no-negated-condition': 'warn',
     'no-else-return': 'warn',
     'no-nested-ternary': 'warn',

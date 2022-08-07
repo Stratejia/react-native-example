@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import { ColorSchemeName } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme, LinkingOptions } from '@react-navigation/native';
-import { RootStackParamList } from 'types/navigation';
-import RootNavigator from 'components/navigation/RootNavigator';
+import { RootStackParamList } from '../../types/navigation';
+import RootNavigator from './RootNavigator';
 
 type Props = {
   readonly linking: LinkingOptions<RootStackParamList>;
