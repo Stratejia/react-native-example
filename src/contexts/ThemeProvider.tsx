@@ -1,12 +1,13 @@
-import React, { createContext, memo, ReactNode, useMemo, useState } from 'react';
+import type { ReactNode } from 'react';
+import React, { createContext, memo, useMemo, useState } from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components/native';
-import { ThemeMode } from '../types/styles';
-import { getTheme } from '../styles';
+import { getTheme } from '../styles/theme';
+import type { ThemeMode } from '../types/styles';
 
 const defaultMode = 'dark';
 
 type Props = {
-  children: ReactNode;
+  readonly children: ReactNode;
 };
 
 function ThemeProvider({ children }: Props) {
@@ -26,9 +27,9 @@ function ThemeProvider({ children }: Props) {
 }
 
 const ThemeContext = createContext<{
-  mode: ThemeMode;
-  setMode: (mode: ThemeMode) => void;
-  switchMode: () => void;
+  readonly mode: ThemeMode;
+  readonly setMode: (mode: ThemeMode) => void;
+  readonly switchMode: () => void;
 }>({ mode: defaultMode, setMode: () => undefined, switchMode: () => undefined });
 
 export default memo(ThemeProvider);

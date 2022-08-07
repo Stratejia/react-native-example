@@ -2,9 +2,9 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import Navigation from './components/navigation/Navigation';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
-import { Navigation } from './components/navigation';
 import ThemeProvider from './contexts/ThemeProvider';
 import routes from './router/routes';
 import './i18n';
@@ -22,11 +22,7 @@ function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
-  if (!isLoadingComplete) {
-    return null;
-  }
-
-  return (
+  return isLoadingComplete ? (
     <ThemeProvider>
       <QueryClientProvider client={queryClient}>
         <SafeAreaProvider>
@@ -35,7 +31,7 @@ function App() {
         </SafeAreaProvider>
       </QueryClientProvider>
     </ThemeProvider>
-  );
+  ) : null;
 }
 
 export default App;

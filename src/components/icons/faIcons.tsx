@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 type Props = {
-  size?: number;
-  color?: string;
+  readonly size?: number;
+  readonly color?: string;
 };
 
 function CatIcon(props: Props) {

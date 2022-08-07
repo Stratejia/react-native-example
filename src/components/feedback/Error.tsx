@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 import Alert from './Alert';
 
 type Props = {
-  text: string;
+  readonly text: string;
 };
 
 function Error({ text }: Props) {

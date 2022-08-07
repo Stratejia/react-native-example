@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { spacing } from '../../styles';
+import spacing from '../../styles/spacing';
 
 const Screen = styled(View)(
   ({ theme }) => css`

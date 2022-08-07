@@ -8,6 +8,8 @@ function useCachedResources() {
 
   useEffect(() => {
     async function loadResourcesAndDataAsync() {
+      // TODO: Find a functional pattern for this
+      // eslint-disable-next-line functional/no-try-statement
       try {
         await preventAutoHideAsync();
 

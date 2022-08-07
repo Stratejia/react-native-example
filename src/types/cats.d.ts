@@ -1,6 +1,6 @@
 declare type AnimalFact = {
-  text: string;
-  createdAt: number;
+  readonly text: string;
+  readonly createdAt: number;
 };
 
 export { AnimalFact };

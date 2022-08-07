@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { TextInput as DefaultTextInput } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { colors, spacing } from '../../styles';
 import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
+import spacing from '../../styles/spacing';
 
 function TextInput() {
   const themeContext = useThemeContext();
@@ -11,7 +12,7 @@ function TextInput() {
   return <StyledTextInput borderColor={borderColor} />;
 }
 
-const StyledTextInput = styled(DefaultTextInput)<{ borderColor: string }>(
+const StyledTextInput = styled(DefaultTextInput)<{ readonly borderColor: string }>(
   ({ theme, borderColor }) => css`
     color: ${theme.text};
     height: ${spacing.input.height};

@@ -1,6 +1,6 @@
 import { Text as DefaultText } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { fonts } from '../../styles';
+import fonts from '../../styles/fonts';
 
 const Typography = styled(DefaultText)(
   ({ theme }) => css`

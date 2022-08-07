@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
-import { List, ListDivider } from '../../../components/data';
-import { AnimalFact } from '../../../types/cats';
+import type { AnimalFact } from '../../../types/cats';
+import List from '../../../components/data/List';
+import ListDivider from '../../../components/data/ListDivider';
 import CatFactListItem from './CatFactListItem';
 
 type Props = {
-  catFacts: AnimalFact[];
+  readonly catFacts: readonly AnimalFact[];
 };
 
 function CatFactList({ catFacts }: Props) {
@@ -12,7 +13,7 @@ function CatFactList({ catFacts }: Props) {
     <List<React.ElementType>
       data={catFacts}
       keyExtractor={(item: AnimalFact) => item.createdAt}
-      renderItem={({ item }: { item: AnimalFact }) => <CatFactListItem catFact={item} />}
+      renderItem={({ item }: { readonly item: AnimalFact }) => <CatFactListItem catFact={item} />}
       ItemSeparatorComponent={() => <ListDivider />}
     />
   );

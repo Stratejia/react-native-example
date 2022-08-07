@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { colors, spacing } from '../../styles';
 import useThemeContext from '../../hooks/useThemeContext';
+import colors from '../../styles/colors';
+import spacing from '../../styles/spacing';
 
 function Divider() {
   const themeContext = useThemeContext();
@@ -11,7 +12,7 @@ function Divider() {
   return <StyledDivider backgroundColor={backgroundColor} />;
 }
 
-const StyledDivider = styled(View)<{ backgroundColor: string }>(
+const StyledDivider = styled(View)<{ readonly backgroundColor: string }>(
   ({ backgroundColor }) => css`
     background-color: ${backgroundColor};
     margin-top: ${spacing.l};

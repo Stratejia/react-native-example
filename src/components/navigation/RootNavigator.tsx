@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../types/navigation';
-import BottomTabNavigator from './BottomTabNavigator';
 import NotFoundScreen from '../../domain/common/screens/NotFoundScreen';
+import type { RootStackParamList } from '../../types/navigation';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

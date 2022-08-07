@@ -1,12 +1,13 @@
 import React, { memo } from 'react';
-import { ColorSchemeName } from 'react-native';
-import { NavigationContainer, DefaultTheme, DarkTheme, LinkingOptions } from '@react-navigation/native';
+import type { ColorSchemeName } from 'react-native';
+import type { LinkingOptions } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import type { RootStackParamList } from '../../types/navigation';
 import RootNavigator from './RootNavigator';
-import { RootStackParamList } from '../../types/navigation';
 
 type Props = {
-  linking: LinkingOptions<RootStackParamList>;
-  colorScheme: ColorSchemeName;
+  readonly linking: LinkingOptions<RootStackParamList>;
+  readonly colorScheme: ColorSchemeName;
 };
 
 function Navigation({ linking, colorScheme }: Props) {
