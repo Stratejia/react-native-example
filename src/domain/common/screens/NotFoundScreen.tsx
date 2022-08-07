@@ -3,7 +3,7 @@ import { Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import ScreenTitle from '../../../components/typography/ScreenTitle';
 import Screen from '../../../components/layouts/Screen';
-import { RootStackScreenProps } from '../../../types/navigation';
+import type { RootStackScreenProps } from '../../../types/navigation';
 
 function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import { ThemeMode } from '../types/styles';
+import type { ThemeMode } from '../types/styles';
 
 const tintColor = '#2f95dc';
 

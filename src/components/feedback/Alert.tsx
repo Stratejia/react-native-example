@@ -1,7 +1,8 @@
-import React, { ReactElement, useMemo } from 'react';
+import type { ReactElement } from 'react';
+import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { Severity } from '../../types/feedback';
+import type { Severity } from '../../types/feedback';
 import useThemeContext from '../../hooks/useThemeContext';
 import colors from '../../styles/colors';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '../icons/faIcons';

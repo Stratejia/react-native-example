@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { AnimalFact } from '../../../types/cats';
+import type { AnimalFact } from '../../../types/cats';
 import List from '../../../components/data/List';
 import ListDivider from '../../../components/data/ListDivider';
 import CatFactListItem from './CatFactListItem';

@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native';
 import { useQuery } from 'react-query';
 import { useTranslation } from 'react-i18next';
 import getRandomCatFacts from '../api/getRandomCatFacts';
-import { AnimalFact } from '../../../types/cats';
+import type { AnimalFact } from '../../../types/cats';
 import CardContent from '../../../components/surfaces/CardContent';
 import Card from '../../../components/surfaces/Card';
 import Error from '../../../components/feedback/Error';

@@ -5,4 +5,4 @@ declare type ThemeProps = {
   readonly darkColor?: string;
 };
 
-export { ThemeMode, ThemeProps };
+export type { ThemeMode, ThemeProps };
