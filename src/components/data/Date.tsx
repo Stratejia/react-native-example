@@ -4,7 +4,7 @@ import localizedFormat from 'dayjs/plugin/localizedFormat';
 dayjs.extend(localizedFormat);
 
 type Props = {
-  children: dayjs.ConfigType;
+  readonly children: dayjs.ConfigType;
 };
 
 function Date({ children }: Props) {

@@ -1,8 +1,8 @@
 import { CAT_FACTS_BASE_URL } from 'react-native-dotenv';
 import axios from 'axios';
-import mockedCatFacts from '../mocks/catFacts';
-import getFeaturesEnv from '../../../config/features-env';
-import { AnimalFact } from '../../../types/cats';
+import mockedCatFacts from 'domain/cats/mocks/catFacts';
+import getFeaturesEnv from 'config/features-env';
+import { AnimalFact } from 'types/cats';
 
 const endpoint = `${CAT_FACTS_BASE_URL}/facts/random`;
 const animalType = 'cat';
@@ -13,11 +13,9 @@ function getEndpoint() {
 }
 
 async function getRandomCatFacts() {
-  if (getFeaturesEnv().useRealCatFacts) {
-    return axios.get(getEndpoint()).then(res => res.data as AnimalFact[]);
-  } else {
-    return mockedCatFacts;
-  }
+  return getFeaturesEnv().useRealCatFacts
+    ? axios.get(getEndpoint()).then(res => res.data as readonly AnimalFact[])
+    : mockedCatFacts;
 }
 
 export default getRandomCatFacts;

@@ -1,8 +1,8 @@
 declare type ThemeMode = 'light' | 'dark';
 
 declare type ThemeProps = {
-  lightColor?: string;
-  darkColor?: string;
+  readonly lightColor?: string;
+  readonly darkColor?: string;
 };
 
 export { ThemeMode, ThemeProps };

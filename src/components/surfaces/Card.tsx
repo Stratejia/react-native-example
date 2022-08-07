@@ -1,11 +1,12 @@
 import React, { ReactNode, useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import useThemeContext from '../../hooks/useThemeContext';
-import { colors, spacing } from '../../styles';
+import useThemeContext from 'hooks/useThemeContext';
+import colors from 'styles/colors';
+import spacing from 'styles/spacing';
 
 type Props = {
-  children: ReactNode;
+  readonly children: ReactNode;
 };
 
 function Card({ children }: Props) {
@@ -20,7 +21,7 @@ function Card({ children }: Props) {
   );
 }
 
-const StyledCard = styled(View)<{ backgroundColor: string; color: string }>(
+const StyledCard = styled(View)<{ readonly backgroundColor: string; readonly color: string }>(
   ({ backgroundColor, color }) => css`
     background-color: ${backgroundColor};
     color: ${color};

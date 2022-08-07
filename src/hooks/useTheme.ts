@@ -1,5 +1,5 @@
-import useThemeContext from './useThemeContext';
-import { getTheme } from '../styles';
+import { getTheme } from 'styles/theme';
+import useThemeContext from 'hooks/useThemeContext';
 
 function useTheme() {
   const themeContext = useThemeContext();

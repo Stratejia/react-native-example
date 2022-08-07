@@ -1,10 +1,13 @@
 import React, { memo } from 'react';
-import { Body1, Caption } from '../../../components/typography';
-import { Date, ListItem, ListItemText } from '../../../components/data';
-import { AnimalFact } from '../../../types/cats';
+import Body1 from 'components/typography/Body1';
+import Caption from 'components/typography/Caption';
+import Date from 'components/data/Date';
+import ListItem from 'components/data/ListItem';
+import ListItemText from 'components/data/ListItemText';
+import { AnimalFact } from 'types/cats';
 
 type Props = {
-  catFact: AnimalFact;
+  readonly catFact: AnimalFact;
 };
 
 function CatFactListItem({ catFact }: Props) {

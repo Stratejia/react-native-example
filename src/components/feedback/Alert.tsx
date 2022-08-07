@@ -1,14 +1,15 @@
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { Severity } from '../../types/feedback';
-import useThemeContext from '../../hooks/useThemeContext';
-import { colors, spacing } from '../../styles';
-import { Body1 } from '../typography';
-import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from '../icons';
+import Body1 from 'components/typography/Body1';
+import { Severity } from 'types/feedback';
+import useThemeContext from 'hooks/useThemeContext';
+import colors from 'styles/colors';
+import spacing from 'styles/spacing';
+import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from 'components/icons/faIcons';
 
 type AlertIconProps = {
-  severity: Severity;
+  readonly severity: Severity;
 };
 
 function AlertIcon({ severity }: AlertIconProps) {
@@ -29,8 +30,8 @@ function AlertIcon({ severity }: AlertIconProps) {
 }
 
 type Props = {
-  severity: Severity;
-  text: string;
+  readonly severity: Severity;
+  readonly text: string;
 };
 
 function Alert({ severity, text }: Props) {
@@ -49,7 +50,7 @@ function Alert({ severity, text }: Props) {
   );
 }
 
-const AlertContainer = styled(View)<{ backgroundColor: string }>(
+const AlertContainer = styled(View)<{ readonly backgroundColor: string }>(
   ({ backgroundColor }) => css`
     display: flex;
     align-items: center;
@@ -60,7 +61,7 @@ const AlertContainer = styled(View)<{ backgroundColor: string }>(
   `,
 );
 
-const AlertText = styled(Body1)<{ color: string }>(
+const AlertText = styled(Body1)<{ readonly color: string }>(
   ({ color }) => css`
     color: ${color};
   `,

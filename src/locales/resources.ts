@@ -1,4 +1,4 @@
-import { resources as en } from './en/resources';
+import { resources as en } from 'locales/en/resources';
 
 export const resources = {
   en,

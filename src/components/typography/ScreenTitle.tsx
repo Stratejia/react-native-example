@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import Typography from './Typography';
-import { fonts } from '../../styles';
+import fonts from 'styles/fonts';
+import Typography from 'components/typography/Typography';
 
 const ScreenTitle = styled(Typography)`
   font-size: ${fonts.sizes.l};

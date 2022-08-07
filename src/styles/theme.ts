@@ -1,3 +1,5 @@
+import { ThemeMode } from 'types/styles';
+
 const tintColor = '#2f95dc';
 
 const light = {
@@ -16,4 +18,17 @@ const dark = {
   tabIconSelected: '#fff',
 };
 
-export { light, dark };
+type Theme = ReturnType<typeof getTheme>;
+
+function getTheme(mode: ThemeMode) {
+  switch (mode) {
+    default:
+    case 'light':
+      return light;
+    case 'dark':
+      return dark;
+  }
+}
+
+export { getTheme, dark, light };
+export type { Theme };

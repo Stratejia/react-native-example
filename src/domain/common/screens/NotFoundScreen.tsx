@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react';
 import { Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { RootStackScreenProps } from '../../../types/navigation';
-import { Screen } from '../../../components/layouts';
-import { ScreenTitle } from '../../../components/typography';
+import { RootStackScreenProps } from 'types/navigation';
+import Screen from 'components/layouts/Screen';
+import ScreenTitle from 'components/typography/ScreenTitle';
 
 function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
   const { t } = useTranslation();

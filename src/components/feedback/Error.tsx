@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import styled from 'styled-components/native';
-import Alert from './Alert';
+import Alert from 'components/feedback/Alert';
 
 type Props = {
-  text: string;
+  readonly text: string;
 };
 
 function Error({ text }: Props) {
