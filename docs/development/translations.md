@@ -2,7 +2,7 @@
 
 We use [i18next](https://www.i18next.com/) and [react-i18next](https://react.i18next.com) for our translations.
 
-They are located in the [`locales`](../src/locales) folder.
+They are located in the [`locales`](../../src/locales) folder.
 
 As you'll see, they are pretty simple: each locale has its own folder, with its translations separated into namespaces.
 

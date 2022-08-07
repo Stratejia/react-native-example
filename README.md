@@ -7,7 +7,7 @@
 
 React-Native template, using TypeScript, styled-components and expo
 
-[Read the docs](docs/README.md)
+[Read the docs](docs.bak/README.md)
 
 ## Available Scripts
 
