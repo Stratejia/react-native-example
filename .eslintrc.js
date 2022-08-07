@@ -33,8 +33,6 @@ module.exports = {
     eqeqeq: 'warn',
     'prefer-template': 'warn',
     'func-style': ['warn', 'declaration'],
-    // TODO: Add this rule once baseUrl (root dir) is fixed
-    // 'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'no-negated-condition': 'warn',
     'no-else-return': 'warn',
     'no-nested-ternary': 'warn',
@@ -44,7 +42,6 @@ module.exports = {
     'functional/no-class': 'error',
     'functional/no-return-void': 'off',
     'functional/no-expression-statement': 'off',
-    'functional/no-conditional-statement': 'off',
     'functional/functional-parameters': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',

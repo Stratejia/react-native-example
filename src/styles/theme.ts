@@ -18,16 +18,17 @@ const dark = {
   tabIconSelected: '#fff',
 };
 
+type ThemeColors = typeof light;
+
+const modeToColors: Record<ThemeMode, ThemeColors> = {
+  light,
+  dark,
+};
+
 type Theme = ReturnType<typeof getTheme>;
 
 function getTheme(mode: ThemeMode) {
-  switch (mode) {
-    default:
-    case 'light':
-      return light;
-    case 'dark':
-      return dark;
-  }
+  return modeToColors[mode];
 }
 
 export { getTheme, dark, light };
