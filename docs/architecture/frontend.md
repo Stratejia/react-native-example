@@ -14,7 +14,12 @@ TODO: Once Storybook is deployed, link it here.
 
 ## Backend communication
 
-TODO: Missing documentation
+We send simple API calls with `axios` in isolated functions. `src/domain/cats/api/getRandomCatFacts.ts` is a good example.
+
+Mock data can be injected instead of calling the API. To use it, refer to listed environment variables listed in
+`src/config/features-env.ts`.
+
+TODO: Once data validation is implemented (not form, API response data validation), explain here
 
 ## File structure
 
