@@ -1,17 +1,21 @@
 # React-Native Template
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
 [![Build](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml/badge.svg)](https://github.com/JStrategia/react-native-nfc-poc/actions/workflows/build.yml)
 
 React-Native template, using TypeScript, styled-components and expo
 
-[Read the docs](docs/README.md)
+[Read the docs](docs/index.md)
 
-## Available Scripts
+Made with love by [Stratéjia](https://www.stratejia.ca/).
 
-Scripts are listed in [`package.json`](package.json). Here are some of the most important ones
+Check the
+[project board](https://github.com/orgs/Stratejia/projects/3/views/1)
+for what we want to do next.
+
+To contribute, make sure you have read the [docs](docs/index.md) and
+[contribution guide](CONTRIBUTING.md).
+
+## Setup
 
 ### Install dependencies
 
@@ -19,11 +23,17 @@ Scripts are listed in [`package.json`](package.json). Here are some of the most 
 yarn
 ```
 
+## Available scripts
+
 ### Lint app
 
 ```bash
-yarn lint
-yarn lint:fix # If you need to --fix
+yarn lint:ls # Run code style for file names
+yarn lint:staged # Run code style fix on staged files
+yarn lint:fix # Fix code style using eslint
+
+yarn prettier
+yarn prettier:write # Fix code style using prettier
 ```
 
 ### Run tests
@@ -56,19 +66,3 @@ yarn start:web
 yarn run:android
 yarn run:ios
 ```
-
-## Contributors
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/ExiledNarwal28">
-        <img src="https://avatars.githubusercontent.com/u/18317767?v=4" alt="Fabien Roy" height="80" width="80">
-        <br />
-        <sub>
-          <b>Fabien Roy</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
