@@ -48,11 +48,13 @@ function Alert({ severity, text }: Props) {
   );
 }
 
+// TODO: 'gap' does not exist in react-native
+// gap: ${spacing.s};
+
 const AlertContainer = styled(View)<{ readonly backgroundColor: string }>(
   ({ backgroundColor }) => css`
     display: flex;
     align-items: center;
-    gap: ${spacing.s};
     padding: ${spacing.xs} ${spacing.m};
     background-color: ${backgroundColor};
     border-radius: ${spacing.xxs};
