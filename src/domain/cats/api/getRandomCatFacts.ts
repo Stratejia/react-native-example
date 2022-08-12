@@ -12,10 +12,13 @@ function getEndpoint() {
   return `${endpoint}?animal_type=${animalType}&amount=${amount}`;
 }
 
-async function getRandomCatFacts() {
-  return getFeaturesEnv().useRealCatFacts
-    ? axios.get(getEndpoint()).then(res => res.data as readonly AnimalFact[])
-    : mockedCatFacts;
+async function getRandomCatFactsFromEndpoint() {
+  const response = await axios.get<readonly AnimalFact[]>(getEndpoint());
+  return response.data;
+}
+
+function getRandomCatFacts() {
+  return getFeaturesEnv().useRealCatFacts ? getRandomCatFactsFromEndpoint() : mockedCatFacts;
 }
 
 export default getRandomCatFacts;

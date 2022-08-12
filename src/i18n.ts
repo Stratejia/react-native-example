@@ -7,6 +7,7 @@ const defaultLanguage = 'en';
 const defaultNamespace = 'common';
 
 use(initReactI18next).init({
+  compatibilityJSON: 'v3',
   lng: defaultLanguage,
   fallbackLng: defaultLanguage,
   ns: defaultNamespace,
