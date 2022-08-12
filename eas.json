@@ -3,28 +3,37 @@
     "version": ">= 0.59.0"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
+    "base": {
       "android": {
-        "gradleCommand": ":app:assembleDebug",
         "image": "latest",
         "env": {
           "PLATFORM": "android"
         }
       },
       "ios": {
-        "buildConfiguration": "Debug",
         "image": "latest",
         "env": {
           "PLATFORM": "ios"
         }
       }
     },
+    "development": {
+      "extends": "base",
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "buildConfiguration": "Debug"
+      }
+    },
     "preview": {
+      "extends": "base",
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "extends": "base"
+    }
   },
   "submit": {
     "production": {}
