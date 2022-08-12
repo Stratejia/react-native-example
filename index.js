@@ -1,5 +1,7 @@
 import { registerRootComponent } from 'expo';
-import App from './App';
+import App from './src/App';
+
+// index.js has to be placed next to package.json for build to work
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
 // It also ensures that whether you load the app in Expo Go or in a native build,
