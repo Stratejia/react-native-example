@@ -48,7 +48,7 @@ function Alert({ severity, text }: Props) {
   );
 }
 
-// TODO: 'gap' does not exist in react-native
+// TODO(#26): 'gap' does not exist in react-native
 // gap: ${spacing.s};
 
 const AlertContainer = styled(View)<{ readonly backgroundColor: string }>(
