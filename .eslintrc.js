@@ -44,6 +44,7 @@ module.exports = {
     'functional/no-expression-statement': 'off',
     'functional/functional-parameters': 'off',
     '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/require-await': 'warn',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
