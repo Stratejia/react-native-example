@@ -5,18 +5,18 @@
         "backgroundColor": "#ffffff",
         "foregroundImage": "./src/assets/images/adaptive-icon.png"
       },
-      "package": "statejia.reactnativenfcpoc"
+      "package": "statejia.reactnativeexample"
     },
     "assetBundlePatterns": ["./src/**/*"],
     "icon": "./src/assets/images/icon.png",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "statejia.reactnativetemplate"
+      "bundleIdentifier": "statejia.reactnativeexample"
     },
-    "name": "ReactNativeTemplate",
+    "name": "ReactNativeExample",
     "orientation": "portrait",
     "scheme": "myapp",
-    "slug": "ReactNativeNfcTemplate",
+    "slug": "ReactNativeExample",
     "splash": {
       "backgroundColor": "#ffffff",
       "image": "./src/assets/images/splash.png",
