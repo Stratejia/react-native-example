@@ -31,7 +31,7 @@ the URL `yarn start` provides and scan the QR code.
 
 ### Emulator
 
-TODO(#TODO): TODO
+TODO(#34): Document Android emulator local run
 
 ## iOS
 
