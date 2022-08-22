@@ -4,11 +4,24 @@ How to deploy the app on various devices and test builds.
 
 We use [EAS (Expo Application Services)](https://docs.expo.dev/eas/) to handle app builds.
 
-We have three different profiles for builds:
+## Commands
 
-- Development: Builds with WIP features for a version. Contains a development client (dev tools).
-- Preview: Pre-production builds, similar to production builds.
-- Production: Builds candidate for release.
+Use the following yarn command:
+
+```bash
+yarn deploy:{platform}:{profile}
+yarn deploy:{all,android,ios}:{dev,preview,prod}
+```
+
+Platform
+- `all`: Both iOS and Android
+- `android`: Only deploy Android
+- `ios`: Only deploy iOS
+
+Profile
+- `dev`: Development, builds with WIP features for a version. Contains a development client (dev tools).
+- `preview`: Preview, pre-production builds, similar to production builds.
+- `prod`: Production, builds candidate for release.
 
 ## Testing the deployed builds
 
