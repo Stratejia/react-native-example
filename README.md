@@ -1,8 +1,8 @@
-# React-Native Example
+# React Native Example
 
 [![Build](https://github.com/Stratejia/react-native-example/actions/workflows/build.yml/badge.svg)](https://github.com/Stratejia/react-native-example/actions/workflows/build.yml)
 
-React-Native example, using TypeScript, styled-components and expo
+React Native example, using TypeScript, styled-components and expo
 
 [Read the docs](docs/index.md)
 

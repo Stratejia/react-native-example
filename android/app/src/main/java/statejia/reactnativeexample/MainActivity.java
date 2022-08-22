@@ -1,4 +1,4 @@
-package statejia.reactnativenfcpoc;
+package statejia.reactnativeexample;
 
 import android.os.Build;
 import android.os.Bundle;
