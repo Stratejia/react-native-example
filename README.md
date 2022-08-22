@@ -66,3 +66,29 @@ yarn start:web
 yarn run:android
 yarn run:ios
 ```
+
+### Build with eas
+
+You can build on the cloud with EAS.
+
+TODO: Add build / deploy documentation link
+
+```bash
+yarn deploy:<platform>:<profile>
+yarn deploy:{all,android,ios}:{dev,prod,preview}
+
+# All devices
+yarn deploy:all:dev
+yarn deploy:all:preview
+yarn deploy:all:prod
+
+# Android
+yarn deploy:android:dev
+yarn deploy:android:preview
+yarn deploy:android:prod
+
+# iOS
+yarn deploy:ios:dev
+yarn deploy:ios:preview
+yarn deploy:ios:prod
+```

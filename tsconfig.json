@@ -16,5 +16,5 @@
     "strict": true,
     "target": "es5"
   },
-  "include": ["src", ".eslintrc.js", "babel.config.js", "metro.config.js"]
+  "include": ["index.js", "src", ".eslintrc.js", "babel.config.js", "metro.config.js"]
 }
