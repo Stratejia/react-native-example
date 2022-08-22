@@ -132,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId 'statejia.reactnativenfcpoc'
+        applicationId 'statejia.reactnativeexample'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

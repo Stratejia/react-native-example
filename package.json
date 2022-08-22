@@ -29,7 +29,9 @@
     "start": "expo start --dev-client",
     "start:web": "expo start --web",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watchAll --passWithNoTests"
+    "test:watch": "jest --watchAll --passWithNoTests",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "jest": {
     "preset": "jest-expo"
