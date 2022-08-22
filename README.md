@@ -71,7 +71,7 @@ yarn run:ios
 
 You can build on the cloud with EAS.
 
-TODO: Add build / deploy documentation link
+More documentation is provided in [`docs/deployment.md`](./docs/deployment.md).
 
 ```bash
 yarn deploy:<platform>:<profile>
