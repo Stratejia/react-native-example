@@ -11,6 +11,22 @@ Here's what we decided to use.
 - [Expo](https://expo.dev/)
 - [React Native](https://reactnative.dev/)
 
+## Deployment
+
+- [EAS](https://docs.expo.dev/eas/)
+
+## Debugging
+
+- [Expo Go](https://expo.dev/client)
+
+## Package manager
+
+- [Yarn](https://yarnpkg.com/)
+
+## Bundler
+
+- [Metro](https://facebook.github.io/metro/)
+
 ## Testing
 
 - [Jest](https://jestjs.io/) (to be implemented)
@@ -23,10 +39,6 @@ Here's what we decided to use.
 ## Styling
 
 - [styled-components](https://styled-components.com/)
-
-## Package manager
-
-- [Yarn](https://yarnpkg.com/)
 
 ## Linting
 

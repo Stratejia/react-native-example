@@ -2,6 +2,7 @@
 
 Documentation usage of parts of the app during development infrastructure and software architecture.
 
+- [Debug App](debug-app.md)
 - [Testing](testing/index.md)
 - [Pre-commit](pre-commit.md)
 - [Translations](translations.md)
