@@ -1,10 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import { z } from 'zod';
 import getMultipleRandom from './utils/getMultipleRandom';
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
+app.use(bodyParser.json());
 
 const catFacts = [
   {
@@ -20,8 +24,6 @@ const catFacts = [
     createdAt: 1661468344890,
   },
 ];
-
-app.use(bodyParser.json());
 
 app.get('/facts/random', (req, res) => {
   const queryParams = z.object({
