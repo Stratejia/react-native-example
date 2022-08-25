@@ -14,8 +14,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "typeRoots": ["./src/types"]
   },
   "include": ["index.js", "src", ".eslintrc.js", "babel.config.js", "metro.config.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "server"]
 }
