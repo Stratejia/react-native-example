@@ -24,8 +24,11 @@ Milestones represent release versions. We use [Semanting Versioning 2.0.0](https
 
 ### Project board
 
-Issues must be placed on the [project board](https://github.com/orgs/Stratejia/projects/2/views/1). There are 5 columns
-in this board :
+Issues must be placed on the [project board](https://github.com/orgs/Stratejia/projects/2/views/1).
+
+The person in charge of an issue is in charge of moving it across the project board.
+
+#### Status
 
 - To groom : Issues not yet marked as "To do"
 - To do : Issues that must be done to deliver the current iteration
@@ -33,7 +36,25 @@ in this board :
 - Under review : Issues currently in review or waiting to be merged
 - Done : Closed issues (see : Definition of done)
 
-The person in charge of an issue is in charge of moving it across the project board.
+#### Priority
+
+Urgent issues must be adressed before anything else, even in progress issues. Other priorities are simply in descending
+order.
+
+- Urgent
+- High
+- Medium
+- Low
+
+#### Size
+
+Estimating with full work days.
+
+- X-Large: Takes multiple weeks
+- Large: Takes a week
+- Medium: Takes a few days
+- Small: Takes a day
+- Tiny: Takes a few hours
 
 ### Bug reporting
 
