@@ -1,0 +1,12 @@
+node_modules/
+dist/
+yarn-error.log
+
+# macOS
+.DS_Store
+
+# JetBrains
+.idea
+
+# env vars
+.env

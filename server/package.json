@@ -5,11 +5,12 @@
   "license": "MIT",
   "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node ./src/server.ts",
+    "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier .",
-    "prettier:write": "prettier . --write"
+    "prettier:write": "prettier . --write",
+    "start": "ts-node ./src/server.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.0",

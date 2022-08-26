@@ -25,22 +25,15 @@ yarn
 
 ## Available scripts
 
-### Lint app
+### Run app
 
 ```bash
-yarn lint:ls # Run code style for file names
-yarn lint:staged # Run code style fix on staged files
-yarn lint:fix # Fix code style using eslint
+yarn start # Generic start, you can then choose which device
+yarn start:web
 
-yarn prettier
-yarn prettier:write # Fix code style using prettier
-```
-
-### Run tests
-
-```bash
-yarn test
-yarn test:watch # If you need to --watch
+# Run on emulator
+yarn run:android
+yarn run:ios
 ```
 
 ### Eject app
@@ -58,16 +51,7 @@ yarn build:android
 yarn build:ios
 ```
 
-### Run app
-
-```bash
-yarn start # Generic start, you can then choose which device
-yarn start:web
-yarn run:android
-yarn run:ios
-```
-
-### Build with eas
+### Deploy app
 
 You can build on the cloud with EAS.
 
@@ -91,4 +75,22 @@ yarn deploy:android:prod
 yarn deploy:ios:dev
 yarn deploy:ios:preview
 yarn deploy:ios:prod
+```
+
+### Lint app
+
+```bash
+yarn lint:ls # Run code style for file names
+yarn lint:staged # Run code style fix on staged files
+yarn lint:fix # Fix code style using eslint
+
+yarn prettier
+yarn prettier:write # Fix code style using prettier
+```
+
+### Run tests
+
+```bash
+yarn test
+yarn test:watch # If you need to --watch
 ```
