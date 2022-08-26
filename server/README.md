@@ -1,5 +1,7 @@
 # Cat Facts API
 
+[![Build Server](https://github.com/Stratejia/react-native-example/actions/workflows/build-server.yml/badge.svg)](https://github.com/Stratejia/react-native-example/actions/workflows/build-server.yml)
+
 Express API built quickly to reproduce a deprecated Cat Facts API.
 
 This API is a temporary fix to help the mobile app's development. Its purpose is to reproduce some API calls we except.
