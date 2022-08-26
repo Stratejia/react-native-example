@@ -9,6 +9,12 @@ This API is a temporary fix to help the mobile app's development. Its purpose is
 There is no real database. Cat facts are a simple array stored in RAM. Closing the server's instance flushes the
 database.
 
+## Routes
+
+- GET /facts/random
+    - Query params
+        - amount: number
+
 ## Setup
 
 ### Install dependencies
