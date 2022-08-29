@@ -19,6 +19,7 @@ function createPostFactParams({ getDatabase, saveDatabase }: CreatePostFactParam
       const validatedBody = body.parse(req.body);
 
       const newCatFact = {
+        username: validatedBody.username,
         text: validatedBody.text,
         createdAt: Date.now(),
       };

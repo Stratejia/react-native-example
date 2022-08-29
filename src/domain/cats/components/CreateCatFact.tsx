@@ -1,27 +1,27 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
-import { useQuery } from 'react-query';
+import { useMutation } from 'react-query';
 import { useTranslation } from 'react-i18next';
-import getRandomCatFacts from '../api/getRandomCatFacts';
 import CardContent from '../../../components/surfaces/CardContent';
 import Card from '../../../components/surfaces/Card';
 import Error from '../../../components/feedback/Error';
-import type { CatFact } from '../schemas/facts';
-import CatFactList from './CatFactList';
+import createCatFact from '../api/createCatFact';
 
-function CatFacts() {
+function CreateCatFact() {
   const { t } = useTranslation('cats');
-  const { data, isLoading, isError } = useQuery('getRandomCatFacts', getRandomCatFacts);
+  const { mutate, isLoading, isError } = useMutation(createCatFact);
 
+  // TODO: Add actual cat form (other component)
+  // TODO: Add translations
   return (
     <Card>
       <CardContent>
         {isLoading && <ActivityIndicator />}
-        {isError && <Error text={t('couldNotGetCatFacts')} />}
-        {data && <CatFactList catFacts={data as readonly CatFact[]} />}
+        {isError && <Error text={t('couldNotCreateCatFact')} />}
+        {!isLoading && !isError && <></>}
       </CardContent>
     </Card>
   );
 }
 
-export default memo(CatFacts);
+export default memo(CreateCatFact);
