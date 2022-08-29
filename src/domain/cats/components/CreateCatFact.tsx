@@ -11,8 +11,12 @@ function CreateCatFact() {
   const { t } = useTranslation('cats');
   const { mutate, isLoading, isError } = useMutation(createCatFact);
 
+  // TODO(#8): on error, show snackbar (remove Error text)
+  // TODO(#8): on success, show snackbar
+
   // TODO: Add actual cat form (other component)
-  // TODO: Add translations
+  // TODO: isLoading should be send to form component (loading spinner on submit button)
+  //       Or......... we could have a context for having a full-screen darkening effect + spinner
   return (
     <Card>
       <CardContent>
