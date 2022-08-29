@@ -1,0 +1,16 @@
+{
+  "facts": [
+    {
+      "text": "Boulette is a beautiful cat!",
+      "createdAt": 1641013200000
+    },
+    {
+      "text": "Le p'tit chat is really cute!",
+      "createdAt": 1655006400000
+    },
+    {
+      "text": "Zelda was the best cat.",
+      "createdAt": 1661468344890
+    }
+  ]
+}

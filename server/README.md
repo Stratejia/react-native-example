@@ -6,13 +6,21 @@ Express API built quickly to reproduce a deprecated Cat Facts API.
 
 This API is a temporary fix to help the mobile app's development. Its purpose is to reproduce some API calls we except.
 
-There is no real database. Cat facts are a simple array stored in RAM. Closing the server's instance flushes the
-database.
+**Before starting the app, make sure to copy `database.example.json` to `database.json`. Yes, this is our database for
+now.**
 
 ## Routes
 
-- GET /facts/random
-    - Query params
+TODO: Swagger docs would be better
+
+- /facts
+  - POST
+    - Body
+      - username: string
+      - text: string
+  - /random
+    - GET
+      - Query params
         - amount: number
 
 ## Setup
