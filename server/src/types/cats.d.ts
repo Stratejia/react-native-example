@@ -1,3 +1,5 @@
+// TODO: Remove this file is not used
+
 declare type CatFact = {
   readonly text: string;
   readonly createdAt: number;
