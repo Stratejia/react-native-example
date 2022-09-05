@@ -7,13 +7,14 @@ type CreateGetRandomFactsParams = {
   readonly getDatabase: () => Database;
 };
 
+const queryParamsSchema = z.object({
+  amount: z.string().regex(/^\d+$/).transform(Number),
+});
+
 function createGetRandomFacts({ getDatabase }: CreateGetRandomFactsParams) {
   return {
     '/facts/random': (req: Request, res: Response) => {
-      const queryParams = z.object({
-        amount: z.string().regex(/^\d+$/).transform(Number),
-      });
-      const validatedQueryParams = queryParams.parse(req.query);
+      const validatedQueryParams = queryParamsSchema.parse(req.query);
 
       const catFacts = getDatabase().facts;
 

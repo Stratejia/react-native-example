@@ -1,6 +1,6 @@
 import type { Database } from '../schemas/database';
 import createGetRandomFacts from './facts/random/get';
-import createPostFactParams from './facts/post';
+import createPostFact from './facts/post';
 
 type CreateRoutesParams = {
   readonly getDatabase: () => Database;
@@ -13,7 +13,7 @@ function createRoutes({ getDatabase, saveDatabase }: CreateRoutesParams) {
       ...createGetRandomFacts({ getDatabase }),
     },
     post: {
-      ...createPostFactParams({ getDatabase, saveDatabase }),
+      ...createPostFact({ getDatabase, saveDatabase }),
     },
   };
 }
