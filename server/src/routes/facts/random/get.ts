@@ -14,6 +14,8 @@ const queryParamsSchema = z.object({
 function createGetRandomFacts({ getDatabase }: CreateGetRandomFactsParams) {
   return {
     '/facts/random': (req: Request, res: Response) => {
+      console.log('GET /facts/random', { query: req.query });
+
       const validatedQueryParams = queryParamsSchema.parse(req.query);
 
       const catFacts = getDatabase().facts;

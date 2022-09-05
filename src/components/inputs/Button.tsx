@@ -21,7 +21,7 @@ const StyledButtonText = `
     font-weight: ${fonts.weights.regular};
     font-size: ${fonts.sizes.s};
     text-transform: uppercase;
-    line-height: 1.75;
+    line-height: 1.75px;
 `;
 
 const variantToGetStyle: Record<Variant, (theme: Theme) => string> = {
@@ -47,7 +47,6 @@ const StyledButton = styled(RNButton)<{ readonly variant: Variant }>(
     border-radius: ${spacing.xxs};
     cursor: pointer;
     padding: ${spacing.xxs} ${spacing.xs};
-    outline: 0;
     border: 0;
 
     ${variantToGetStyle[variant](theme)}

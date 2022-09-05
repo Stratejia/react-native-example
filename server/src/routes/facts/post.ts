@@ -16,6 +16,8 @@ const bodySchema = z.object({
 function createPostFact({ getDatabase, saveDatabase }: CreatePostFactParams) {
   return {
     '/facts': (req: Request, res: Response) => {
+      console.log('POST /facts', { body: req.body });
+
       const validatedBody = bodySchema.parse(req.body);
 
       const newCatFact = {

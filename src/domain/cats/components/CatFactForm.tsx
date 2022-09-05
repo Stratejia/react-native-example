@@ -1,11 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import TextInput from '../../../components/inputs/TextInput';
 import Button from '../../../components/inputs/Button';
-import Caption from '../../../components/typography/Caption';
+// TODO: See if wanted, this is for error display
+// import Caption from '../../../components/typography/Caption';
 import type { SaveCatFactParams } from '../schemas/catFacts';
 import { saveCatFactParamsSchema } from '../schemas/catFacts';
 
@@ -15,33 +16,41 @@ type Props = {
 
 function CatFactForm({ onSubmit }: Props) {
   const { t } = useTranslation('cats');
-  const {
-    register,
-    trigger,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<SaveCatFactParams>({
+  const { control, handleSubmit, formState } = useForm<SaveCatFactParams>({
     resolver: zodResolver(saveCatFactParamsSchema),
+    defaultValues: {
+      username: '',
+      text: '',
+    },
   });
 
   function handleFormSubmit() {
     handleSubmit(onSubmit);
   }
 
-  // TODO: Sending trigger to onPress doesn't work
-  // eslint-disable-next-line functional/prefer-tacit
-  function handleSaveButtonPress() {
-    return trigger();
-  }
+  // TODO: Remove error logs
+  useEffect(() => {
+    console.log(formState);
+  }, [formState]);
 
-  // TODO: Better display of errors
+  // TODO: VALIDATION NOT WORKING, TO FIX (formState never updates?)
+  // TODO: Move form inputs to their own components -> https://blog.logrocket.com/build-better-forms-with-react-native-ui-components
+  // TODO: Better display of errors (i18n)
+  // {isDirty && !isValid && <Caption>{JSON.stringify(errors)}</Caption>}
   return (
-    <form onSubmit={handleFormSubmit}>
-      <TextInput placeholder={t('form.username')} {...register('username')} />
-      <TextInput placeholder={t('form.text')} {...register('text')} />
-      <Button title={t('form.save')} onPress={handleSaveButtonPress} />
-      {errors && <Caption>{errors}</Caption>}
-    </form>
+    <>
+      <Controller
+        control={control}
+        name="username"
+        render={({ field }) => <TextInput placeholder={t('form.username')} {...field} />}
+      />
+      <Controller
+        control={control}
+        name="text"
+        render={({ field }) => <TextInput placeholder={t('form.text')} {...field} />}
+      />
+      <Button title={t('form.save')} onPress={handleFormSubmit} />
+    </>
   );
 }
 
