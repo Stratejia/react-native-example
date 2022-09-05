@@ -2,5 +2,10 @@
   "catFacts": "Cat Facts",
   "createCatFact": "Create Cat Fact",
   "couldNotGetCatFacts": "Could not get cat facts",
-  "couldNotCreateCatFact": "Could not create cat fact"
+  "couldNotCreateCatFact": "Could not create cat fact",
+  "form": {
+    "username": "Username",
+    "text": "Text",
+    "save": "Save"
+  }
 }

@@ -4,7 +4,7 @@ import Date from '../../../components/data/Date';
 import ListItemText from '../../../components/data/ListItemText';
 import Body1 from '../../../components/typography/Body1';
 import Caption from '../../../components/typography/Caption';
-import type { CatFact } from '../schemas/facts';
+import type { CatFact } from '../schemas/catFacts';
 
 type Props = {
   readonly catFact: CatFact;

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import List from '../../../components/data/List';
 import ListDivider from '../../../components/data/ListDivider';
-import type { CatFact } from '../schemas/facts';
+import type { CatFact } from '../schemas/catFacts';
 import CatFactListItem from './CatFactListItem';
 
 type Props = {

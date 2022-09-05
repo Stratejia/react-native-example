@@ -1,31 +1,48 @@
 import React, { memo } from 'react';
-import { ActivityIndicator } from 'react-native';
-import { useMutation } from 'react-query';
 import { useTranslation } from 'react-i18next';
-import CardContent from '../../../components/surfaces/CardContent';
-import Card from '../../../components/surfaces/Card';
-import Error from '../../../components/feedback/Error';
-import createCatFact from '../api/createCatFact';
+import type { SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import TextInput from '../../../components/inputs/TextInput';
+import Button from '../../../components/inputs/Button';
+import Caption from '../../../components/typography/Caption';
+import type { SaveCatFactParams } from '../schemas/catFacts';
+import { saveCatFactParamsSchema } from '../schemas/catFacts';
 
-function CreateCatFact() {
+type Props = {
+  readonly onSubmit: SubmitHandler<SaveCatFactParams>;
+};
+
+function CatFactForm({ onSubmit }: Props) {
   const { t } = useTranslation('cats');
-  const { mutate, isLoading, isError } = useMutation(createCatFact);
+  const {
+    register,
+    trigger,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SaveCatFactParams>({
+    resolver: zodResolver(saveCatFactParamsSchema),
+  });
 
-  // TODO(#8): on error, show snackbar (remove Error text)
-  // TODO(#8): on success, show snackbar
+  function handleFormSubmit() {
+    handleSubmit(onSubmit);
+  }
 
-  // TODO: Add actual cat form (other component)
-  // TODO: isLoading should be send to form component (loading spinner on submit button)
-  //       Or......... we could have a context for having a full-screen darkening effect + spinner
+  // TODO: Sending trigger to onPress doesn't work
+  // eslint-disable-next-line functional/prefer-tacit
+  function handleSaveButtonPress() {
+    return trigger();
+  }
+
+  // TODO: Better display of errors
   return (
-    <Card>
-      <CardContent>
-        {isLoading && <ActivityIndicator />}
-        {isError && <Error text={t('couldNotCreateCatFact')} />}
-        {!isLoading && !isError && <></>}
-      </CardContent>
-    </Card>
+    <form onSubmit={handleFormSubmit}>
+      <TextInput placeholder={t('form.username')} {...register('username')} />
+      <TextInput placeholder={t('form.text')} {...register('text')} />
+      <Button title={t('form.save')} onPress={handleSaveButtonPress} />
+      {errors && <Caption>{errors}</Caption>}
+    </form>
   );
 }
 
-export default memo(CreateCatFact);
+export default memo(CatFactForm);

@@ -6,6 +6,8 @@ import CardContent from '../../../components/surfaces/CardContent';
 import Card from '../../../components/surfaces/Card';
 import Error from '../../../components/feedback/Error';
 import createCatFact from '../api/createCatFact';
+import type { SaveCatFactParams } from '../schemas/catFacts';
+import CatFactForm from './CatFactForm';
 
 function CreateCatFact() {
   const { t } = useTranslation('cats');
@@ -14,15 +16,16 @@ function CreateCatFact() {
   // TODO(#8): on error, show snackbar (remove Error text)
   // TODO(#8): on success, show snackbar
 
-  // TODO: Add actual cat form (other component)
-  // TODO: isLoading should be send to form component (loading spinner on submit button)
-  //       Or......... we could have a context for having a full-screen darkening effect + spinner
+  function handleSubmit(params: SaveCatFactParams) {
+    mutate(params);
+  }
+
   return (
     <Card>
       <CardContent>
         {isLoading && <ActivityIndicator />}
         {isError && <Error text={t('couldNotCreateCatFact')} />}
-        {!isLoading && !isError && <></>}
+        {!isLoading && !isError && <CatFactForm onSubmit={handleSubmit} />}
       </CardContent>
     </Card>
   );

@@ -1,6 +1,5 @@
 import { z } from 'zod';
 
-// TODO: Validate API return with zod
 const catFactSchema = z.object({
   username: z.string(),
   text: z.string(),
@@ -9,12 +8,13 @@ const catFactSchema = z.object({
 
 type CatFact = z.infer<typeof catFactSchema>;
 
-// TODO: Validate form with zod
-const createCatFactParamsSchema = z.object({
+const saveCatFactParamsSchema = z.object({
+  // Obviously username should come from auth
   username: z.string(),
   text: z.string(),
 });
 
-type CreateCatFactParams = z.infer<typeof createCatFactParamsSchema>;
+type SaveCatFactParams = z.infer<typeof saveCatFactParamsSchema>;
 
-export type { CatFact, CreateCatFactParams };
+export { saveCatFactParamsSchema };
+export type { CatFact, SaveCatFactParams };

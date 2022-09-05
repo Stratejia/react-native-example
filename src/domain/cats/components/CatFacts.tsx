@@ -6,7 +6,7 @@ import getRandomCatFacts from '../api/getRandomCatFacts';
 import CardContent from '../../../components/surfaces/CardContent';
 import Card from '../../../components/surfaces/Card';
 import Error from '../../../components/feedback/Error';
-import type { CatFact } from '../schemas/facts';
+import type { CatFact } from '../schemas/catFacts';
 import CatFactList from './CatFactList';
 
 function CatFacts() {
