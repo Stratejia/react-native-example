@@ -2,7 +2,7 @@
 
 **Contributions are welcome!**
 
-Don't forget to read the [docs](./docs/index.md)!
+Don't forget to read the [docs]([./docs/index.md](https://stratejia.github.io/react-native-example/))!
 
 ## Code of conduct
 
@@ -24,7 +24,7 @@ Milestones represent release versions. We use [Semanting Versioning 2.0.0](https
 
 ### Project board
 
-Issues must be placed on the [project board](https://github.com/orgs/Stratejia/projects/2/views/1).
+Issues must be placed on the [project board](https://github.com/orgs/Stratejia/projects/3/views/1).
 
 The person in charge of an issue is in charge of moving it across the project board.
 
