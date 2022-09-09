@@ -4,7 +4,7 @@
 
 React-Native example, using TypeScript, styled-components and expo
 
-[Read the docs](docs/index.md)
+[Read the docs](https://stratejia.github.io/react-native-example/)
 
 Made with love by [Stratéjia](https://www.stratejia.ca/).
 
