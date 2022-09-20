@@ -21,7 +21,7 @@ function CreateCatFact() {
   }
 
   return (
-    <Card>
+    <Card fullWidth>
       <CardContent>
         {isLoading && <ActivityIndicator />}
         {isError && <Error text={t('couldNotCreateCatFact')} />}

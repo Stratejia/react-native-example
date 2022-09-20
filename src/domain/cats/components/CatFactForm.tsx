@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import TextInput from '../../../components/inputs/TextInput';
 import Button from '../../../components/inputs/Button';
+import TextInputField from '../../../components/forms/TextInputField';
 import type { SaveCatFactParams } from '../schemas/catFacts';
 import { saveCatFactParamsSchema } from '../schemas/catFacts';
 
@@ -28,14 +28,14 @@ function CatFactForm({ onSubmit }: Props) {
         control={control}
         name="username"
         render={({ field, fieldState: { error } }) => (
-          <TextInput placeholder={t('form.username')} error={error?.message} {...field} />
+          <TextInputField placeholder={t('form.username')} error={error?.message} {...field} />
         )}
       />
       <Controller
         control={control}
         name="text"
         render={({ field, fieldState: { error } }) => (
-          <TextInput placeholder={t('form.text')} error={error?.message} {...field} />
+          <TextInputField placeholder={t('form.text')} error={error?.message} {...field} />
         )}
       />
       <Button title={t('form.save')} onPress={handleSubmit(onSubmit)} />

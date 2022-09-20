@@ -17,7 +17,7 @@ function CatFacts() {
   // TODO: Remove button, use something better + remove <br /> (like scroll up?)
   return (
     <>
-      <Card>
+      <Card fullWidth>
         <CardContent>
           {isLoading && <ActivityIndicator />}
           {isError && <Error text={t('couldNotGetCatFacts')} />}

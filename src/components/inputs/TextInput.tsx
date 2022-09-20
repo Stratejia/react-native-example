@@ -1,27 +1,18 @@
 import React, { forwardRef, useMemo } from 'react';
-import type { TextInputProps } from 'react-native';
+import type { TextInputProps as RNTextInputProps } from 'react-native';
 import { TextInput as RNTextInput } from 'react-native';
 import styled, { css } from 'styled-components/native';
 import useThemeContext from '../../hooks/useThemeContext';
 import colors from '../../styles/colors';
 import spacing from '../../styles/spacing';
-import Caption from '../typography/Caption';
 
-type Props = {
-  readonly error?: string;
-} & TextInputProps;
+type TextInputProps = RNTextInputProps;
 
-const TextInput = forwardRef(({ error, ...otherProps }: Props, ref) => {
+const TextInput = forwardRef((props: TextInputProps, ref) => {
   const themeContext = useThemeContext();
   const borderColor = useMemo(() => colors[themeContext.mode].border, [themeContext]);
 
-  // TODO: Better error display
-  return (
-    <>
-      <StyledTextInput {...otherProps} borderColor={borderColor} ref={ref} />
-      {error && <Caption>{error}</Caption>}
-    </>
-  );
+  return <StyledTextInput {...props} borderColor={borderColor} ref={ref} />;
 });
 
 // TODO: Solve this FP-style?
@@ -40,4 +31,5 @@ const StyledTextInput = styled(RNTextInput)<{ readonly borderColor: string }>(
   `,
 );
 
+export type { TextInputProps };
 export default TextInput;
