@@ -5,14 +5,23 @@ import styled, { css } from 'styled-components/native';
 import useThemeContext from '../../hooks/useThemeContext';
 import colors from '../../styles/colors';
 import spacing from '../../styles/spacing';
+import Caption from '../typography/Caption';
 
-type Props = TextInputProps;
+type Props = {
+  readonly error?: string;
+} & TextInputProps;
 
-const TextInput = forwardRef((props: Props, ref) => {
+const TextInput = forwardRef(({ error, ...otherProps }: Props, ref) => {
   const themeContext = useThemeContext();
   const borderColor = useMemo(() => colors[themeContext.mode].border, [themeContext]);
 
-  return <StyledTextInput {...props} borderColor={borderColor} ref={ref} />;
+  // TODO: Better error display
+  return (
+    <>
+      <StyledTextInput {...otherProps} borderColor={borderColor} ref={ref} />
+      {error && <Caption>{error}</Caption>}
+    </>
+  );
 });
 
 // TODO: Solve this FP-style?
