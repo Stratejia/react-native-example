@@ -22,6 +22,7 @@
     "lint:staged": "lint-staged",
     "lint:styles": "stylelint src/**/*.{ts,tsx}",
     "lint:styles:fix": "stylelint src/**/*.{ts,tsx} --fix",
+    "prepare": "husky install",
     "prettier": "prettier .",
     "prettier:write": "prettier . --write",
     "run:android": "expo run:android",

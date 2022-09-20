@@ -23,6 +23,12 @@ To contribute, make sure you have read the [docs](docs/index.md) and
 yarn
 ```
 
+### Install pre-commit hook
+
+```bash
+yarn prepare
+```
+
 ## Available scripts
 
 ### Run app
