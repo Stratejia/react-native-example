@@ -28,16 +28,6 @@ const TextInput = forwardRef(({ error, ...otherProps }: Props, ref) => {
 // eslint-disable-next-line functional/immutable-data
 TextInput.displayName = 'TextInput';
 
-// TODO: Remove this simpler version, if not needed
-/*
-function TextInput(props: Props) {
-  const themeContext = useThemeContext();
-  const borderColor = useMemo(() => colors[themeContext.mode].border, [themeContext]);
-
-  return <StyledTextInput borderColor={borderColor} {...props} />;
-}
-*/
-
 const StyledTextInput = styled(RNTextInput)<{ readonly borderColor: string }>(
   ({ theme, borderColor }) => css`
     color: ${theme.text};
