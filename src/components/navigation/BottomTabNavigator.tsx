@@ -5,7 +5,7 @@ import type { RootTabParamList } from '../../types/navigation';
 import useTheme from '../../hooks/useTheme';
 import CatFactsScreen from '../../domain/cats/screens/CatFactsScreen';
 import AboutScreen from '../../domain/about/screens/AboutScreen';
-import { CatIcon, QuestionIcon } from '../icons/faIcons';
+import { CatIcon, PlusIcon, QuestionIcon } from '../icons/faIcons';
 import CreateCatFactScreen from '../../domain/cats/screens/CreateCatFactScreen';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
@@ -14,7 +14,6 @@ function BottomTabNavigator() {
   const { t } = useTranslation('navigation');
   const theme = useTheme();
 
-  // TODO: Icon for create cat fact
   return (
     <BottomTab.Navigator
       initialRouteName="CatFacts"
@@ -35,7 +34,7 @@ function BottomTabNavigator() {
         component={CreateCatFactScreen}
         options={{
           title: t('createCatFact'),
-          tabBarIcon: ({ color }) => <CatIcon size={20} color={color} />,
+          tabBarIcon: ({ color }) => <PlusIcon size={20} color={color} />,
         }}
       />
       <BottomTab.Screen

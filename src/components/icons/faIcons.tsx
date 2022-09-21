@@ -10,6 +10,10 @@ function CatIcon(props: Props) {
   return <FontAwesome5 name="cat" {...props} />;
 }
 
+function PlusIcon(props: Props) {
+  return <FontAwesome5 name="plus" {...props} />;
+}
+
 function ErrorIcon(props: Props) {
   return <FontAwesome5 name="skull-crossbones" {...props} />;
 }
@@ -30,4 +34,4 @@ function WarningIcon(props: Props) {
   return <FontAwesome5 name="circle-exclamation" {...props} />;
 }
 
-export { CatIcon, ErrorIcon, InfoIcon, QuestionIcon, SuccessIcon, WarningIcon };
+export { CatIcon, PlusIcon, ErrorIcon, InfoIcon, QuestionIcon, SuccessIcon, WarningIcon };
