@@ -7,24 +7,26 @@ type CreatePostFactParams = {
   readonly saveDatabase: (database: Database) => void;
 };
 
-function createPostFactParams({ getDatabase, saveDatabase }: CreatePostFactParams) {
+const bodySchema = z.object({
+  // Obviously username should come from auth
+  username: z.string(),
+  text: z.string(),
+});
+
+function createPostFact({ getDatabase, saveDatabase }: CreatePostFactParams) {
   return {
     '/facts': (req: Request, res: Response) => {
-      const body = z.object({
-        // Obviously username should come from auth
-        username: z.string(),
-        text: z.string(),
-      });
+      console.log('POST /facts', { body: req.body });
 
-      const validatedBody = body.parse(req.body);
+      const validatedBody = bodySchema.parse(req.body);
 
       const newCatFact = {
+        username: validatedBody.username,
         text: validatedBody.text,
         createdAt: Date.now(),
       };
 
       const database = getDatabase();
-      // TODO: Kinda assuming we don't need a deep copy
       const newDatabase = {
         facts: [...database.facts, newCatFact],
       };
@@ -35,4 +37,4 @@ function createPostFactParams({ getDatabase, saveDatabase }: CreatePostFactParam
   };
 }
 
-export default createPostFactParams;
+export default createPostFact;

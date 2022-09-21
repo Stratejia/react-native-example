@@ -20,6 +20,7 @@ declare type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nat
 
 declare type RootTabParamList = {
   readonly CatFacts: undefined;
+  readonly CreateCatFact: undefined;
   readonly About: undefined;
 };
 

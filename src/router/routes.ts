@@ -13,6 +13,11 @@ const routes: LinkingOptions<RootStackParamList> = {
               CatFacts: 'catFacts',
             },
           },
+          CreateCatFact: {
+            screens: {
+              CreateCatFact: 'createCatFact',
+            },
+          },
           About: {
             screens: {
               About: 'about',

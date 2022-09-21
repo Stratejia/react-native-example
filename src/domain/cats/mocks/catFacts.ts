@@ -1,15 +1,18 @@
 const catFacts = [
   {
-    text: 'Boulette is a wonderful cat',
-    createdAt: 1646437408,
+    username: 'ExiledNarwal28',
+    text: 'Boulette is a beautiful cat!',
+    createdAt: 1641013200000,
   },
   {
-    text: 'Cats have two ears',
-    createdAt: 1646955808,
+    username: 'AverageCatEnjoyer',
+    text: "Le p'tit chat is really cute!",
+    createdAt: 1655006400000,
   },
   {
-    text: "Every second you're not running, a cat is getting closer",
-    createdAt: 1649630608,
+    username: 'Garfield89',
+    text: 'Zelda was the best cat.',
+    createdAt: 1661468344890,
   },
 ];
 

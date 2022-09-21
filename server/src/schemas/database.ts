@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { factSchema } from './facts';
+import { catFactSchema } from './catFacts';
 
 const databaseSchema = z.object({
-  facts: z.array(factSchema),
+  facts: z.array(catFactSchema),
 });
 
 type Database = z.infer<typeof databaseSchema>;

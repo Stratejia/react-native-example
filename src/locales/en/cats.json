@@ -1,4 +1,12 @@
 {
   "catFacts": "Cat Facts",
-  "couldNotGetCatFacts": "Could not get cat facts"
+  "createCatFact": "Create Cat Fact",
+  "couldNotGetCatFacts": "Could not get cat facts",
+  "couldNotCreateCatFact": "Could not create cat fact",
+  "form": {
+    "username": "Username",
+    "text": "Text",
+    "save": "Save"
+  },
+  "refetch": "Refetch"
 }

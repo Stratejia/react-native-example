@@ -1,8 +1,10 @@
 import { CAT_FACTS_BASE_URL } from 'react-native-dotenv';
 import axios from 'axios';
+import { z } from 'zod';
 import mockedCatFacts from '../mocks/catFacts';
 import getFeaturesEnv from '../../../config/features-env';
-import type { AnimalFact } from '../../../types/cats';
+import type { CatFact } from '../schemas/catFacts';
+import { catFactSchema } from '../../../../server/src/schemas/catFacts';
 
 const endpoint = `${CAT_FACTS_BASE_URL}/facts/random`;
 const amount = 3;
@@ -12,8 +14,8 @@ function getEndpoint() {
 }
 
 async function getRandomCatFactsFromEndpoint() {
-  const response = await axios.get<readonly AnimalFact[]>(getEndpoint());
-  return response.data;
+  const response = await axios.get<readonly CatFact[]>(getEndpoint());
+  return z.array(catFactSchema).parse(response.data);
 }
 
 function getRandomCatFacts() {
